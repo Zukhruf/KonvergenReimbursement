@@ -1,0 +1,169 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+}
+
+#bodyContent {
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #f8f9fa;
+  background-color: #f8f9fa;
+}
+
+#buttonContentUpper {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-size: 12pt;
+}
+
+.btn {
+  border-color: #CCCCCC;
+  font-size: 12pt;
+  border-width: 1pt;
+  color: #5B5B5B;
+}
+
+.btn-confirmation {
+  border-color: #FF7533;
+  font-size: 12pt;
+  border-width: 1pt;
+  color: #FF7533;
+}
+
+#upperForm {
+  margin-bottom: 30px;
+}
+
+#formButton {
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #f8f9fa;
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+#headerForm {
+  text-align: center;
+}
+
+#inputFotoCustom {
+  margin-top: auto;
+}
+
+#modalHeader {
+  border-color: #FFAC33;
+  background-color: #FFAC33;
+  color: #FFFFFF;
+}
+
+#HeaderDaftarReimbursement {
+  color: #333333;
+  font-size: 20pt;
+}
+
+.btn-outline-primary:hover {
+  background-color: #FF7533;
+  color: #FFFFFF;
+  border-color: #FF7533;
+}
+
+.btn-outline-primary.dropdown-toggle.show {
+  background-color: #FF7533;
+  color: #FFFFFF;
+  border-color: #FF7533;
+}
+
+.dropdown-item:hover {
+  background-color: #FF7533;
+  color: #FFFFFF;
+}
+
+#btnHapusFilter {
+  background-color: #E20000;
+  color: #FFFFFF;
+  border-color: #E20000;
+}
+
+#btnBack {
+  background-color: #f8f9fa;
+  color: #FF7533;
+  border-color: #f8f9fa;
+  width: 19.82261085510254px;
+  left: 48px;
+  top: 91px;
+  border-radius: 0px;
+}
+
+#breadcrumbs {
+  font-size: 20px;
+}
+
+#detailBodyContent {
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+  border-style: solid;
+}
+
+#detailReimbursementBodyContentRiwayat {
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+  border-style: solid;
+}
+
+.table-custom thead {
+  background-color: #F1F1F1;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.trash-button {
+  color: #E20000;
+}
+
+.table-custom {
+  border: 1px solid #F1F1F1;
+  border-radius: 25px;
+}
+
+.modal {
+  overflow: auto !important;
+}
+
+.red-star {
+  color: #FF0000;
+}
+
+.field-icon {
+  z-index: 2;
+  color:#fe7b00;
+}
+
+.hourglassLogo {
+  color: #777777;
+}
+
+.checkLogo {
+  color: #0095BE;
+}
+
+.clockLogo {
+  color: #F0BF00;
+}

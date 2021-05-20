@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  align-items: center;
+}
+
+html, body {
+  height: 100%
+}
+
+.mainForm {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  background-color: #F3F6F7;
+  border-color: #F3F6F7;
+}
+
+.form-floating {
+  display: flex;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.flex-container {
+  flex-direction: column;
+}
+
+.headingPage {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#bgContainer {
+  color: #FE7B00;
+  background: #F3F6F7;
+}
+
+#btnLogin {
+  background-color: #FE7B00;
+  border-color: #FE7B00
+}
+.field-icon {
+  float: right;
+  margin-left: -33px;
+  margin-top: 22px;
+  position: relative;
+  z-index: 2;
+}

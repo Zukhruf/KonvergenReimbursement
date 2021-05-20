@@ -1,0 +1,15 @@
+<svg width="792" height="720" viewBox="0 0 792 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="792" height="720" fill="#FCBA5A"/>
+<rect x="238" width="128" height="128" fill="#FFAC33"/>
+<rect x="110" width="128" height="128" fill="#FFAC33"/>
+<rect x="-18" width="128" height="128" fill="#FFAC33"/>
+<rect x="110" y="128" width="128" height="128" fill="#FFAC33"/>
+<rect x="-18" y="128" width="128" height="128" fill="#FFAC33"/>
+<rect x="-18" y="256" width="128" height="128" fill="#FFAC33"/>
+<rect x="536" y="720" width="128" height="128" transform="rotate(-180 536 720)" fill="#FFAC33"/>
+<rect x="664" y="720" width="128" height="128" transform="rotate(-180 664 720)" fill="#FFAC33"/>
+<rect x="792" y="720" width="128" height="128" transform="rotate(-180 792 720)" fill="#FFAC33"/>
+<rect x="664" y="592" width="128" height="128" transform="rotate(-180 664 592)" fill="#FFAC33"/>
+<rect x="792" y="592" width="128" height="128" transform="rotate(-180 792 592)" fill="#FFAC33"/>
+<rect x="792" y="464" width="128" height="128" transform="rotate(-180 792 464)" fill="#FFAC33"/>
+</svg>
