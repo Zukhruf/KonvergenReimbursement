@@ -55,9 +55,9 @@
       <!--Button Upper-->
       <div class="d-flex" id="buttonContentUpper">
         <button type="button" class="btn rounded btn-outline-primary me-2 mb-2 shadow" name="button" data-bs-toggle="modal" data-bs-target="#reimbursementModal"><i class="fas fa-plus me-2"></i>Buat Reimbursement</button>
-        <form class="col-md-3 me-2" action="" method="post" id="">
+        <form class="col-md-3 me-2" action="<?php echo base_url()."index.php/KaryawanController/search/".echo $this->session->userdata('id_user'); ?>" method="post" id="">
           <div class="">
-            <input type="text" name="" class="form-control" value="" placeholder="&#xf002; Cari ID Reimbursement, nama pembelian">
+            <input type="text" name="search_query" class="form-control" value="" placeholder="&#xF002; Cari ID Reimbursement, nama pembelian">
           </div>
         </form>
         <button type="button" class="btn btn-outline-primary dropdown-toggle shadow mb-2 rounded" name="button" data-bs-toggle="dropdown"><i class="fas fa-filter me-2"></i>Filter</button>
