@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="<?php echo base_url()."asset/CustomCSSJS/BodyCustomStyle.css"; ?>">
     <link rel="stylesheet" href="<?php echo base_url()."asset/FA/fontawesome/css/all/css" ?>">
     <link rel="stylesheet" href="<?php echo base_url()."asset/CustomCSSJS/LoginStyle.css" ?>">
+    <link rel="icon" href="<?php echo base_url()."asset/Icon&IllustrationKRMS/Logokrms_icon.ico"; ?>">
     <title>Reimbursement Management System</title>
   </head>
   <div class="container-fluid" style="position: relative; left: 0; top: 0;">
