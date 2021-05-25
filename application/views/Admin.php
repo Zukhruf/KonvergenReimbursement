@@ -66,7 +66,14 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="btn btn-outline-primary dropdown-toggle ms-auto shadow mb-2 rounded" name="button" data-bs-toggle="dropdown">Urut Berdasarkan</button>
+        <div class="dropdown">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle ms-auto shadow mb-2 rounded" name="button" data-bs-toggle="dropdown">Urut Berdasarkan</button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Nomor Pegawai</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <!--List-->
       <div class="container-fluid" id="listContent">
