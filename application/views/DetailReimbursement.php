@@ -76,26 +76,26 @@
                 <p>Deskripsi Pembelian  : <?php echo $detail->deskripsi_reimbursement; ?></p>
                 <?php $date = date_create($detail->tanggal_pembelian); ?>
                 <p>Tanggal pembelian    : <?php echo date_format($date, "l, d F Y"); ?></p>
-                <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
+                <?php if ($detail->status_reimbursement == "Menunggu Verifikasi") {
                   // code...
                   echo '<p>Status : <span class="badge rounded-pill" id="textMenungguVerifikasi">';
-                  echo $details->reimbursement;
+                  echo $detail->reimbursement;
                   echo '</span></p>';
-                } else if ($details->status_reimbursement == "Pending"){
+                } else if ($detail->status_reimbursement == "Pending"){
                   echo '<p>Status : <span class="badge rounded-pill" id="textPending">';
-                  echo $details->reimbursement;
+                  echo $detail->reimbursement;
                   echo '</span></p>';
-                } else if ($details->status_reimbursement == "Tidak Valid"){
+                } else if ($detail->status_reimbursement == "Tidak Valid"){
                   echo '<p>Status : <span class="badge rounded-pill" id="textTidakValid">';
-                  echo $details->reimbursement;
+                  echo $detail->reimbursement;
                   echo '</span></p>';
-                } else if ($details->status_reimbursement == "Valid"){
+                } else if ($detail->status_reimbursement == "Valid"){
                   echo '<p>Status : <span class="badge rounded-pill" id="textValid">';
-                  echo $details->reimbursement;
+                  echo $detail->reimbursement;
                   echo '</span></p>';
-                } else if ($details->status_reimbursement == "Selesai"){
+                } else if ($detail->status_reimbursement == "Selesai"){
                   echo '<p>Status : <span class="badge rounded-pill" id="textSelesai">';
-                  echo $details->reimbursement;
+                  echo $detail->reimbursement;
                   echo '</span></p>';
                 }
                 ?>
