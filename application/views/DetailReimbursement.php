@@ -90,6 +90,7 @@
           <?php if ($detail->status_reimbursement == "Menunggu Reimbursement") {
             // code...
             echo "<div>";
+            echo $detail->status_reimbursement;
             echo "<p>Menunggu Verifikasi</p>";
             echo "</div>";
           } else if ($detail->status_reimbursement == "Pending") {
