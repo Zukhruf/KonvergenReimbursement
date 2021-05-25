@@ -87,6 +87,7 @@
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
           <h1 class="h3 mt-1">Riwayat Status</h1>
+          <?php echo $detail->status_reimbursement; ?>
           <?php if ($detail->status_reimbursement == "Menunggu Reimbursement") {
             // code...
             echo "<div>";
