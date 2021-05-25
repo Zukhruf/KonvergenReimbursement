@@ -66,7 +66,7 @@
             </li>
           </ul>
         </div>
-        <div class="dropdown">
+        <div class="dropdown ms-auto mb-2">
           <button type="button" class="btn btn-outline-primary dropdown-toggle ms-auto shadow mb-2 rounded" name="button" data-bs-toggle="dropdown">Urut Berdasarkan</button>
           <ul class="dropdown-menu">
             <li>
