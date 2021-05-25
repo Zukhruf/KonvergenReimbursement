@@ -59,10 +59,10 @@
         <button type="button" class="btn btn-outline-primary dropdown-toggle ms-auto shadow mb-2 rounded" name="button" data-bs-toggle="dropdown">Urut Berdasarkan</button>
         <ul class="dropdown-menu">
           <li>
-            <a class="dropdown-item" href="#">Status</a>
+            <a class="dropdown-item" href="#">Karyawan</a>
           </li>
           <li>
-            <a class="dropdown-item" href="#">Kategori</a>
+            <a class="dropdown-item" href="#">Finance</a>
           </li>
         </ul>
       </div>
