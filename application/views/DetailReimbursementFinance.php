@@ -90,6 +90,7 @@
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
           <h1 class="h3 mt-1">Riwayat Status</h1>
+          <?php $details->status_reimbursement; ?>
           <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
             // code...
             echo "<div>";
