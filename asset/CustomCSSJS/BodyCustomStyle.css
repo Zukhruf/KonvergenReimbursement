@@ -152,25 +152,25 @@ body {
   color: #00A42A;
 }
 
-/* .bg-primary {
-  background-color:   #77777733;
+.bg-primary {
+  background-color:   #777777;
 }
 
 .bg-secondary {
-  background-color: #F0BF0033;
+  background-color: #F0BF00;
 }
 
 .bg-danger {
-  background-color: #FF000033;
+  background-color: #FF0000;
 }
 
 .bg-success {
-  background-color: #0095BE33;
+  background-color: #0095BE;
 }
 
 .bg-info {
-  background-color: #00A42A33;
-} */
+  background-color: #00A42A;
+}
 
 .table-custom thead {
   background-color: #F1F1F1;
