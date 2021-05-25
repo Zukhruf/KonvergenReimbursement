@@ -127,7 +127,7 @@ class FinanceController extends CI_Controller
     //Get count Menunggu Verifikasi
     $result['menungguVerifikasiCount'] = $this->FinanceModel->getMenungguVerifikasiCount();
     //Get count Selesai
-    $data['selesaiCount'] = $this->FinanceModel->getSelesaiCount();
+    $result['selesaiCount'] = $this->FinanceModel->getSelesaiCount();
     $this->load->view('FinanceSearch', $result);
   }
 }
