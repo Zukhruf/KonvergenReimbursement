@@ -55,9 +55,9 @@
       <!--Button Upper-->
       <div class="d-flex" id="buttonContentUpper">
         <button type="button" class="btn btn-outline-primary me-2 shadow mb-2 rounded" name="button" data-bs-toggle="modal" data-bs-target="#karyawanModal"><i class="fas fa-plus me-2"></i>Buat Pengguna Baru</button>
-        <button type="button" class="btn btn-outline-primary dropdown-toggle shadow mb-2 rounded" name="button" data-bs-toggle="dropdown"><i class="fas fa-filter me-2"></i>Filter</button>
+        <button type="button" class="btn btn-outline-primary dropdown-toggle shadow mb-2 rounded" name="button" data-bs-toggle="dropdown" data-bs-target="#byRole"><i class="fas fa-filter me-2"></i>Filter By Role</button>
         <button type="button" class="btn btn-outline-primary dropdown-toggle ms-auto shadow mb-2 rounded" name="button" data-bs-toggle="dropdown">Urut Berdasarkan</button>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu" id="#byRole">
           <li>
             <a class="dropdown-item" href="#">Karyawan</a>
           </li>
