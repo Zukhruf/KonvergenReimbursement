@@ -78,9 +78,9 @@
               <p>Nominal pembelian    : <?php echo $detail->jumlah_reimbursement; ?></p>
               <p>Bukti : </p>
               <div class="d-flex">
-                <a href="#" data-bs-target="#modalLihatFoto1" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $detail->bukti_reimbursement?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
-                 <a href="#" data-bs-target="#modalLihatFoto2" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $detail->bukti_reimbursement2?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
-                 <a href="#" data-bs-target="#modalLihatFoto3" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $detail->bukti_reimbursement3?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
+                 <a href="#" data-bs-target="#modalLihatFoto1" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $detail->bukti_reimbursement;?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
+                 <a href="#" data-bs-target="#modalLihatFoto2" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $detail->bukti_reimbursement2;?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
+                 <a href="#" data-bs-target="#modalLihatFoto3" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $detail->bukti_reimbursement3;?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
               </div>
             </div>
           </div>

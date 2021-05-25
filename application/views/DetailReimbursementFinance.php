@@ -81,16 +81,16 @@
               <p>Nominal pembelian    : <?php echo $details->jumlah_reimbursement; ?></p>
               <p>Bukti : </p>
               <div class="d-flex">
-                <a href="#" data-bs-target="#modalLihatFoto1" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $details->bukti_reimbursement?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
-                <a href="#" data-bs-target="#modalLihatFoto2" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $details->bukti_reimbursement2?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
-                <a href="#" data-bs-target="#modalLihatFoto3" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $details->bukti_reimbursement3?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
+                <a href="#" data-bs-target="#modalLihatFoto1" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $details->bukti_reimbursement;?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
+                <a href="#" data-bs-target="#modalLihatFoto2" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $details->bukti_reimbursement2;?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
+                <a href="#" data-bs-target="#modalLihatFoto3" data-bs-toggle="modal"><img src="<?php echo base_url()?>asset/Pict/<?php echo $details->bukti_reimbursement3;?>" alt="" width="80px" height="80px" class="me-2 rounded"></a>
               </div>
             </div>
           </div>
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
           <h1 class="h3 mt-1">Riwayat Status</h1>
-          <?php $details->status_reimbursement; ?>
+          <?php echo $details->status_reimbursement; ?>
           <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
             // code...
             echo "<div>";
