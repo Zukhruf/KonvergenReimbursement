@@ -90,6 +90,56 @@
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
           <h1 class="h3 mt-1">Riwayat Status</h1>
+          <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
+            // code...
+            echo "<div>";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+          } else if ($details->status_reimbursement == "Pending") {
+            echo "<div>";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+            echo "<div>";
+            echo "<p>Pending</p>";
+            echo "</div>";
+          } else if ($details->status_reimbursement == "Tidak Valid") {
+            // code...
+            echo "<div>";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+            echo "<div>";
+            echo "<p>Pending</p>";
+            echo "</div>";
+            echo "<div>";
+            echo "<p>Tidak Valid</p>";
+            echo "</div>";
+          } else if ($details->status_reimbursement == "Valid") {
+            // code...
+            echo "<div>";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+            echo "<div>";
+            echo "<p>Pending</p>";
+            echo "</div>";
+            echo "<div>";
+            echo "<p>Valid</p>";
+            echo "</div>";
+          } else if ($details->status_reimbursement == "Selesai") {
+            // code...
+            echo "<div>";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+            echo "<div>";
+            echo "<p>Pending</p>";
+            echo "</div>";
+            echo "<div>";
+            echo "<p>Valid</p>";
+            echo "</div>";
+            echo "<div>";
+            echo "<p>Selesai</p>";
+            echo "</div>";
+          }
+          ?>
         </div>
       </div>
     </div>
