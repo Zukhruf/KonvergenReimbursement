@@ -93,11 +93,19 @@
           <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
             // code...
             echo "<div>";
-            echo "<p>Menunggu Verifikasi</p>";
+            echo "<h5>Menunggu Verifikasi</p>";
+            echo "<p>";
+            $date = date_create($details->tanggal_pengajuan);
+            echo date_format($date, "l, d F Y");
+            echo "</p>";
             echo "</div>";
           } else if ($details->status_reimbursement == "Pending") {
             echo "<div>";
-            echo "<p>Menunggu Verifikasi</p>";
+            echo "<h5>Menunggu Verifikasi</p>";
+            echo "<p>";
+            $date = date_create($details->tanggal_pengajuan);
+            echo date_format($date, "l, d F Y");
+            echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<p>Pending</p>";
@@ -105,7 +113,11 @@
           } else if ($details->status_reimbursement == "Tidak Valid") {
             // code...
             echo "<div>";
-            echo "<p>Menunggu Verifikasi</p>";
+            echo "<h5>Menunggu Verifikasi</p>";
+            echo "<p>";
+            $date = date_create($details->tanggal_pengajuan);
+            echo date_format($date, "l, d F Y");
+            echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<p>Pending</p>";
@@ -116,7 +128,11 @@
           } else if ($details->status_reimbursement == "Valid") {
             // code...
             echo "<div>";
-            echo "<p>Menunggu Verifikasi</p>";
+            echo "<h5>Menunggu Verifikasi</p>";
+            echo "<p>";
+            $date = date_create($details->tanggal_pengajuan);
+            echo date_format($date, "l, d F Y");
+            echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<p>Pending</p>";
@@ -127,7 +143,11 @@
           } else if ($details->status_reimbursement == "Selesai") {
             // code...
             echo "<div>";
-            echo "<p>Menunggu Verifikasi</p>";
+            echo "<h5>Menunggu Verifikasi</p>";
+            echo "<p>";
+            $date = date_create($details->tanggal_pengajuan);
+            echo date_format($date, "l, d F Y");
+            echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<p>Pending</p>";
