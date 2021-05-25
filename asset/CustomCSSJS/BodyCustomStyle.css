@@ -152,6 +152,26 @@ body {
   color: #00A42A;
 }
 
+.bg-primary {
+  background-color:   #77777733;
+}
+
+.bg-secondary {
+  background-color: #F0BF0033;
+}
+
+.bg-danger {
+  background-color: #FF000033;
+}
+
+.bg-success {
+  background-color: #0095BE33;
+}
+
+.bg-info {
+  background-color: #00A42A33;
+}
+
 .table-custom thead {
   background-color: #F1F1F1;
   border-radius: 8px 8px 0px 0px;

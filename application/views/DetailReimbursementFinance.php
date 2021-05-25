@@ -79,23 +79,23 @@
                 <p>Tanggal Pembelian    : <?php echo date_format($date, "l, d F Y"); ?></p>
                 <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
                   // code...
-                  echo '<p>Status : <span class="badge rounded-pill" id="textMenungguVerifikasi">';
+                  echo '<p>Status : <span class="badge rounded-pill bg-primary" id="textMenungguVerifikasi">';
                   echo $details->status_reimbursement;
                   echo '</span></p>';
                 } else if ($details->status_reimbursement == "Pending"){
-                  echo '<p>Status : <span class="badge rounded-pill" id="textPending">';
+                  echo '<p>Status : <span class="badge rounded-pill bg-secondary" id="textPending">';
                   echo $details->status_reimbursement;
                   echo '</span></p>';
                 } else if ($details->status_reimbursement == "Tidak Valid"){
-                  echo '<p>Status : <span class="badge rounded-pill" id="textTidakValid">';
+                  echo '<p>Status : <span class="badge rounded-pill bg-danger" id="textTidakValid">';
                   echo $details->status_reimbursement;
                   echo '</span></p>';
                 } else if ($details->status_reimbursement == "Valid"){
-                  echo '<p>Status : <span class="badge rounded-pill" id="textValid">';
+                  echo '<p>Status : <span class="badge rounded-pill bg-success" id="textValid">';
                   echo $details->status_reimbursement;
                   echo '</span></p>';
                 } else if ($details->status_reimbursement == "Selesai"){
-                  echo '<p>Status : <span class="badge rounded-pill" id="textSelesai">';
+                  echo '<p>Status : <span class="badge rounded-pill bg-info" id="textSelesai">';
                   echo $details->status_reimbursement;
                   echo '</span></p>';
                 }
