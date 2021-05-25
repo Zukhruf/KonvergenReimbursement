@@ -83,10 +83,10 @@ class KaryawanModel extends CI_Model
     return $return;
   }
 
-  public function search($id_user, $nama_reimbursement)
+  public function search($nama_reimbursement)
   {
     // code...
-    $searchQuery = array('nama_reimbursement' => $nama_reimbursement, 'id_user' => $id_user);
+    $searchQuery = array('nama_reimbursement' => $nama_reimbursement);
     $this->db->like($searchQuery);
     $queryResult = $this->db->get('reimbursement');
     return $queryResult->result();
