@@ -226,7 +226,7 @@
             <?php foreach ($reimbursements as $reimbursement) : ?>
               <tr>
                 <td><?php echo $i; ?></td>
-                <td><a href="<?php echo "FinanceController/viewReimbursement/".$reimbursement->id_reimbursement; ?>"><?php echo $reimbursement->id_reimbursement; ?></a></td>
+                <td><a href="<?php echo base_url()."index.php/FinanceController/viewReimbursement/".$reimbursement->id_reimbursement; ?>"><?php echo $reimbursement->id_reimbursement; ?></a></td>
                 <td><?php echo $reimbursement->id_user; ?></td>
                 <td><?php echo $reimbursement->nama_reimbursement; ?></td>
                 <?php $datePembelian = date_create($reimbursement->tanggal_pembelian); ?>
@@ -236,7 +236,7 @@
                 <td><?php echo $reimbursement->jenis_reimbursement; ?></td>
                 <td><?php echo $reimbursement->jumlah_reimbursement; ?></td>
                 <td><?php echo $reimbursement->status_reimbursement; ?></td>
-                <td><a href="<?php echo "FinanceController/hapusReimbursement/".$reimbursement->id_reimbursement; ?>"><i class="fa fa-trash-alt trash-button" aria-hidden="true"></i></a></td>
+                <td><a href="<?php echo base_url()."index.php/FinanceController/hapusReimbursement/".$reimbursement->id_reimbursement; ?>"><i class="fa fa-trash-alt trash-button" aria-hidden="true"></i></a></td>
               </tr>
               <?php $i++; ?>
             <?php endforeach; ?>
