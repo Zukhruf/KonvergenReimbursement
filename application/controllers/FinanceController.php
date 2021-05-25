@@ -113,6 +113,14 @@ class FinanceController extends CI_Controller
     $data['reimbursements'] = $this->FinanceModel->readListReimbursement();
     $this->load->view('ExportLaporan', $data);
   }
+
+  public function search()
+  {
+    // code...
+    $nama_reimbursement = $this->input->post('search_query');
+    $result['reimbursementList'] = $this->KaryawanModel->search($nama_reimbursement);
+    $this->load->view('KaryawanSearch', $result);
+  }
 }
 
 
