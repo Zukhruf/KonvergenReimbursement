@@ -94,7 +94,7 @@
             // code...
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $date = date_create($details->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
@@ -102,14 +102,14 @@
           } else if ($details->status_reimbursement == "Pending") {
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<h5>Pending</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $datePending = date_create($detail->tanggal_pending);
             echo date_format($datePending, "l, d F Y");
             echo "</p>";
@@ -118,21 +118,21 @@
             // code...
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<h5>Pending</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $datePending = date_create($detail->tanggal_pending);
             echo date_format($datePending, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<h5>Tidak Valid</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $dateTidakValid = date_create($detail->tanggal_tidak_valid);
             echo date_format($dateTidakValid, "l, d F Y");
             echo "</p>";
@@ -141,21 +141,21 @@
             // code...
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<h5>Pending</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $datePending = date_create($detail->tanggal_pending);
             echo date_format($datePending, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<h5>Valid</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $dateValid = date_create($detail->tanggal_valid);
             echo date_format($dateValid, "l, d F Y");
             echo "</p>";
@@ -164,28 +164,28 @@
             // code...
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<h5>Pending</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $datePending = date_create($detail->tanggal_pending);
             echo date_format($datePending, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<h5>Valid</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $dateValid = date_create($detail->tanggal_valid);
             echo date_format($dateValid, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
             echo "<h5>Selesai</h5>";
-            echo '<p id="tanggalRiwayat">';
+            echo '<p id="tanggalRiwayat" class="mt-1">';
             $dateSelesai = date_create($detail->tanggal_selesai);
             echo date_format($dateVSelesai, "l, d F Y");
             echo "</p>";
