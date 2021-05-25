@@ -95,7 +95,7 @@
       <!--Button Upper-->
       <div class="d-flex" id="buttonContentUpper">
         <a href="<?php echo base_url().'index.php/FinanceController/generateLaporan'; ?>"><button type="button" class="btn rounded btn-outline-primary me-2 mb-2 shadow" name="button">Buat Laporan (.xls)</button></a>
-        <form class="col-md-3 me-2" action="<?php echo base_url()."index.php/FinanceController/"; ?>" method="post" id="">
+        <form class="col-md-3 me-2" action="<?php echo base_url()."index.php/FinanceController/search"; ?>" method="post" id="">
           <div class="">
             <input type="text" name="search_query" class="form-control" value="" placeholder="&#xF002; Cari ID Reimbursement, nama pembelian">
           </div>
