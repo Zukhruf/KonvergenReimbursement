@@ -87,11 +87,9 @@
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
           <h1 class="h3 mt-1">Riwayat Status</h1>
-          <?php echo $detail->status_reimbursement; ?>
-          <?php if ($detail->status_reimbursement == "Menunggu Reimbursement") {
+          <?php if ($detail->status_reimbursement == "Menunggu Verifikasi") {
             // code...
             echo "<div>";
-            echo $detail->status_reimbursement;
             echo "<p>Menunggu Verifikasi</p>";
             echo "</div>";
           } else if ($detail->status_reimbursement == "Pending") {
