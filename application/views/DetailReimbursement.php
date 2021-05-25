@@ -79,23 +79,23 @@
                 <?php if ($detail->status_reimbursement == "Menunggu Verifikasi") {
                   // code...
                   echo '<p>Status : <span class="badge rounded-pill" id="textMenungguVerifikasi">';
-                  echo $detail->reimbursement;
+                  echo $detail->status_reimbursement;
                   echo '</span></p>';
                 } else if ($detail->status_reimbursement == "Pending"){
                   echo '<p>Status : <span class="badge rounded-pill" id="textPending">';
-                  echo $detail->reimbursement;
+                  echo $detail->status_reimbursement;
                   echo '</span></p>';
                 } else if ($detail->status_reimbursement == "Tidak Valid"){
                   echo '<p>Status : <span class="badge rounded-pill" id="textTidakValid">';
-                  echo $detail->reimbursement;
+                  echo $detail->status_reimbursement;
                   echo '</span></p>';
                 } else if ($detail->status_reimbursement == "Valid"){
                   echo '<p>Status : <span class="badge rounded-pill" id="textValid">';
-                  echo $detail->reimbursement;
+                  echo $detail->status_reimbursement;
                   echo '</span></p>';
                 } else if ($detail->status_reimbursement == "Selesai"){
                   echo '<p>Status : <span class="badge rounded-pill" id="textSelesai">';
-                  echo $detail->reimbursement;
+                  echo $detail->status_reimbursement;
                   echo '</span></p>';
                 }
                 ?>
