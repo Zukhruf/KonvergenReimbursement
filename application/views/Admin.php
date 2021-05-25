@@ -112,8 +112,8 @@
                         </div>
                       </div>
                     </div>
-      </div>
-              </tr>
+                  </div>
+                </tr>
               <?php $i++; ?>
             <?php endforeach; ?>
           </tbody>
@@ -234,7 +234,6 @@
           </div>
         </div>
       </form>
-
     <!-- footer -->
     </br></br></br>
     <footer>
