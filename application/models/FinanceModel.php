@@ -84,6 +84,7 @@ class FinanceModel extends CI_Model
   public function getValidCount()
   {
     // code...
+    $this->db->where('is_deleted', 0);
     $this->db->where('status_reimbursement', 'Valid');
     return $this->db->count_all_results('reimbursement');
   }
@@ -91,6 +92,7 @@ class FinanceModel extends CI_Model
   public function getTidakValidCount()
   {
     // code...
+    $this->db->where('is_deleted', 0);
     $this->db->where('status_reimbursement', 'Tidak Valid');
     return $this->db->count_all_results('reimbursement');
   }
@@ -98,6 +100,7 @@ class FinanceModel extends CI_Model
   public function getPendingCount()
   {
     // code...
+    $this->db->where('is_deleted', 0);
     $this->db->where('status_reimbursement', 'Pending');
     return $this->db->count_all_results('reimbursement');
   }
@@ -105,6 +108,7 @@ class FinanceModel extends CI_Model
   public function getMenungguVerifikasiCount()
   {
     // code...
+    $this->db->where('is_deleted', 0);
     $this->db->where('status_reimbursement', 'Menunggu Verifikasi');
     return $this->db->count_all_results('reimbursement');
   }
@@ -112,6 +116,7 @@ class FinanceModel extends CI_Model
   public function getSelesaiCount()
   {
     // code...
+    $this->db->where('is_deleted', 0);
     $this->db->where('status_reimbursement', 'Selesai');
     return $this->db->count_all_results('reimbursement');
   }
