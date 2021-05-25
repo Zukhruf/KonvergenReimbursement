@@ -91,7 +91,7 @@
             // code...
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo "<p id="tanggalRiwayat">";
+            echo '<p id="tanggalRiwayat">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
