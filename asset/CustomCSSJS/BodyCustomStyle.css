@@ -132,6 +132,26 @@ body {
   font-size: 15px;
 }
 
+#textMenungguVerifikasi {
+  color: #777777;
+}
+
+#textValid {
+  color: #0095BE;
+}
+
+#textTidakValid {
+  color: #FF0000;
+}
+
+#textPending {
+  color: #F0BF00;
+}
+
+#textSelesai {
+  color: #00A42A;
+}
+
 .table-custom thead {
   background-color: #F1F1F1;
   border-radius: 8px 8px 0px 0px;
