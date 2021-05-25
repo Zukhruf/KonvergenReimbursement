@@ -115,6 +115,15 @@ class FinanceModel extends CI_Model
     $this->db->where('status_reimbursement', 'Selesai');
     return $this->db->count_all_results('reimbursement');
   }
+
+  public function search($nama_reimbursement)
+  {
+    // code...
+    $searchQuery = array('nama_reimbursement' => $nama_reimbursement);
+    $this->db->like($searchQuery);
+    $queryResult = $this->db->get('reimbursement');
+    return $queryResult->result();
+  }
 }
 
 
