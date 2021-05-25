@@ -99,39 +99,37 @@
                   </div>
                   <div class="mb-3">
                     <label for="UnitKerja" class="col-sm-2 col-form-label">Unit Kerja Karyawan</label>
-                    <div class="col-sm">
-                      <div class="col-md">
-                        <select class="form-select" name="unit_kerja_karyawan" id="UnitKerja">
-                          <option value="COO">COO</option>
-                          <option value="CEO">CEO</option>
-                          <option value="CTO">CTO</option>
-                          <option value="Lead Finance">Lead Finance</option>
-                          <option value="Lead HR">Lead HR</option>
-                          <option value="Sales Representative">Sales Representative</option>
-                          <option value="Project Manager">Project Manager</option>
-                          <option value="Lead AI">Lead AI</option>
-                          <option value="Lead Software">Lead Software</option>
-                          <option value="Lead Annotator">Lead Annotator</option>
-                          <option value="AI Engineer">AI Engineer</option>
-                          <option value="AI Scientist">AI Scientist</option>
-                          <option value="Full Stack Engineer">Full Stack Engineer</option>
-                          <option value="Front End Engineer">Front End Engineer</option>
-                          <option value="Back End Engineer">Back End Engineer</option>
-                          <option value="Annotator">Annotator</option>
-                        </select>
-                      </div>
+                    <div class="col-md">
+                      <select class="form-select" name="unit_kerja_karyawan" id="UnitKerja">
+                        <option value="COO">COO</option>
+                        <option value="CEO">CEO</option>
+                        <option value="CTO">CTO</option>
+                        <option value="Lead Finance">Lead Finance</option>
+                        <option value="Lead HR">Lead HR</option>
+                        <option value="Sales Representative">Sales Representative</option>
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="Lead AI">Lead AI</option>
+                        <option value="Lead Software">Lead Software</option>
+                        <option value="Lead Annotator">Lead Annotator</option>
+                        <option value="AI Engineer">AI Engineer</option>
+                        <option value="AI Scientist">AI Scientist</option>
+                        <option value="Full Stack Engineer">Full Stack Engineer</option>
+                        <option value="Front End Engineer">Front End Engineer</option>
+                        <option value="Back End Engineer">Back End Engineer</option>
+                        <option value="Annotator">Annotator</option>
+                      </select>
                     </div>
                   </div>
                   <div class="mb-3">
                     <label for="NoTeleponKaryawan" class="col-sm-2 col-form-label">No Telp Karyawan</label>
                     <div class="col-sm">
-                      <input type="date" name="no_telp_karyawan" value="<?php echo $karyawan->no_telp_karyawan; ?>" class="form-control" id="NoTeleponKaryawan" placeholder="<?php echo $karyawan->no_telp_karyawan; ?>">
+                      <input type="text" name="no_telp_karyawan" value="<?php echo $karyawan->no_telp_karyawan; ?>" class="form-control" id="NoTeleponKaryawan" placeholder="<?php echo $karyawan->no_telp_karyawan; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
                     <label for="TanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm">
-                      <input type="text" name="tanggal_lahir" value="<?php echo $karyawan->tanggal_lahir; ?>" class="form-control" id="TanggalLahir" placeholder="<?php echo $karyawan->tanggal_lahir; ?>">
+                      <input type="date" name="tanggal_lahir" value="<?php echo $karyawan->tanggal_lahir; ?>" class="form-control" id="TanggalLahir" placeholder="<?php echo $karyawan->tanggal_lahir; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
