@@ -87,21 +87,56 @@
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
           <h1 class="h3 mt-1">Riwayat Status</h1>
-          <div class="">
-            <p>Menunggu Verifikasi</p>
-          </div>
-          <div class="">
-            <p>Pending</p>
-          </div>
-          <div class="">
-            <p>Tidak Valid</p>
-          </div>
-          <div class="">
-            <p>Valid</p>
-          </div>
-          <div class="">
-            <p>Selesai</p>
-          </div>
+          <?php if ($detail->status_reimbursement == 'Menunggu Reimbursement') {
+            // code...
+            echo "<div class="">";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+          } else if ($detail->status_reimbursement == 'Pending') {
+            echo "<div class="">";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+            echo "<div class="">";
+            echo "<p>Pending</p>";
+            echo "</div>";
+          } else if ($detail->status_reimbursement == 'Tidak Valid') {
+            // code...
+            echo "<div class="">";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+            echo "<div class="">";
+            echo "<p>Pending</p>";
+            echo "</div>";
+            echo "<div class="">";
+            echo "<p>Tidak Valid</p>";
+            echo "</div>";
+          } else if ($detail->status_reimbursement == 'Valid') {
+            // code...
+            echo "<div class="">";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+            echo "<div class="">";
+            echo "<p>Pending</p>";
+            echo "</div>";
+            echo "<div class="">";
+            echo "<p>Valid</p>";
+            echo "</div>";
+          } else if ($detail->status_reimbursement == 'Valid') {
+            // code...
+            echo "<div class="">";
+            echo "<p>Menunggu Verifikasi</p>";
+            echo "</div>";
+            echo "<div class="">";
+            echo "<p>Pending</p>";
+            echo "</div>";
+            echo "<div class="">";
+            echo "<p>Valid</p>";
+            echo "</div>";
+            echo "<div class="">";
+            echo "<p>Selesai</p>";
+            echo "</div>";
+          }
+          ?>
         </div>
       </div>
     </div>
