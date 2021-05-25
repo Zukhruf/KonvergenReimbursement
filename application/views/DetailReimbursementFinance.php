@@ -73,7 +73,7 @@
                 <p>Tanggal Pengajuan    : <?php echo date_format($datePengajuan, "l, d F Y"); ?></p>
                 <p>Kategori Pembelian   : <?php echo $details->jenis_reimbursement; ?></p>
                 <p>Deskripsi Pembelian  : <?php echo $details->deskripsi_reimbursement; ?></p>
-                <?php $date = date_create($details->tanggal_pembelian) ?>
+                <?php $date = date_create($details->tanggal_pembelian); ?>
                 <p>Tanggal Pembelian    : <?php echo date_format($date, "l, d F Y"); ?></p>
                 <p>Status : <span class="badge rounded-pill bg-secondary"> <?php echo $details->status_reimbursement; ?></span></p>
             </div>
@@ -89,7 +89,7 @@
           </div>
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
-          <h1 class="h3 mt-1">Riwayat Status</h1>
+          <h1 class="h3 mt-1 mb-2">Riwayat Status</h1>
           <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
             // code...
             echo "<div>";

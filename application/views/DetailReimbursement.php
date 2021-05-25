@@ -68,10 +68,12 @@
             <div class="container-fluid">
                 <p>ID Reimbursement     : <?php echo $detail->id_reimbursement; ?></p>
                 <p>Nama Reimbursement   : <?php echo $detail->nama_reimbursement; ?></p>
-                <p>Tanggal Pengajuan    : <?php echo $detail->tanggal_pengajuan; ?></p>
+                <?php $datePengajuan = date_create($detail->tanggal_pengajuan); ?>
+                <p>Tanggal Pengajuan    : <?php echo date_format($datePengajuan, "l, d F Y"); ?></p>
                 <p>Kategori Pembelian   : <?php echo $detail->jenis_reimbursement; ?></p>
                 <p>Deskripsi Pembelian  : <?php echo $detail->deskripsi_reimbursement; ?></p>
-                <p>Tanggal pembelian    : <?php echo $detail->tanggal_pembelian; ?></p>
+                <?php $date = date_create($detail->tanggal_pembelian); ?>
+                <p>Tanggal pembelian    : <?php echo date_format($date, "l, d F Y"); ?></p>
                 <p>Status : <span class="badge rounded-pill bg-secondary"> <?php echo $detail->status_reimbursement; ?></span></p>
             </div>
             <div class="container-fluid">
@@ -86,7 +88,7 @@
           </div>
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
-          <h1 class="h3 mt-1">Riwayat Status</h1>
+          <h1 class="h3 mt-1 mb-2">Riwayat Status</h1>
           <?php if ($detail->status_reimbursement == "Menunggu Verifikasi") {
             // code...
             echo "<div>";
