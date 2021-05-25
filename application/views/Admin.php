@@ -55,7 +55,7 @@
       <!--Button Upper-->
       <div class="d-flex" id="buttonContentUpper">
         <button type="button" class="btn btn-outline-primary me-2 shadow mb-2 rounded" name="button" data-bs-toggle="modal" data-bs-target="#karyawanModal"><i class="fas fa-plus me-2"></i>Buat Pengguna Baru</button>
-        <div class="dropdown">
+        <div class="dropdown mb-2">
           <button type="button" class="btn btn-outline-primary dropdown-toggle shadow mb-2 rounded" name="button" data-bs-toggle="dropdown" data-bs-target="#byRole"><i class="fas fa-filter me-2"></i>Filter By Role</button>
           <ul class="dropdown-menu" id="#byRole">
             <li>
