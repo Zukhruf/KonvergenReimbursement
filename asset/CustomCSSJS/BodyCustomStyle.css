@@ -153,23 +153,23 @@ body {
 }
 
 .bg-primary {
-  background-color:   #777777;
+  background-color:   #77777733!important;
 }
 
 .bg-secondary {
-  background-color: #F0BF00;
+  background-color: #F0BF0033!important;
 }
 
 .bg-danger {
-  background-color: #FF0000;
+  background-color: #FF000033!important;
 }
 
 .bg-success {
-  background-color: #0095BE;
+  background-color: #0095BE33!important;
 }
 
 .bg-info {
-  background-color: #00A42A;
+  background-color: #00A42A33!important;
 }
 
 .table-custom thead {
