@@ -118,7 +118,7 @@ class FinanceController extends CI_Controller
   {
     // code...
     $nama_reimbursement = $this->input->post('search_query');
-    $result['reimbursementList'] = $this->KaryawanModel->search($nama_reimbursement);
+    $result['reimbursementList'] = $this->FinanceModel->search($nama_reimbursement);
     $this->load->view('KaryawanSearch', $result);
   }
 }
