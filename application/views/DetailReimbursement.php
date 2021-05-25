@@ -99,61 +99,93 @@
           } else if ($detail->status_reimbursement == "Pending") {
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo "<p>";
+            echo '<p id="tanggalRiwayat">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<p>Pending</p>";
+            echo "<h5>Pending</h5>";
+            echo '<p id="tanggalRiwayat">';
+            $datePending = date_create($detail->tanggal_pending);
+            echo date_format($datePending, "l, d F Y");
+            echo "</p>";
             echo "</div>";
           } else if ($detail->status_reimbursement == "Tidak Valid") {
             // code...
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo "<p>";
+            echo '<p id="tanggalRiwayat">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<p>Pending</p>";
+            echo "<h5>Pending</h5>";
+            echo '<p id="tanggalRiwayat">';
+            $datePending = date_create($detail->tanggal_pending);
+            echo date_format($datePending, "l, d F Y");
+            echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<p>Tidak Valid</p>";
+            echo "<h5>Tidak Valid</h5>";
+            echo '<p id="tanggalRiwayat">';
+            $dateTidakValid = date_create($detail->tanggal_tidak_valid);
+            echo date_format($dateTidakValid, "l, d F Y");
+            echo "</p>";
             echo "</div>";
           } else if ($detail->status_reimbursement == "Valid") {
             // code...
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo "<p>";
+            echo '<p id="tanggalRiwayat">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<p>Pending</p>";
+            echo "<h5>Pending</h5>";
+            echo '<p id="tanggalRiwayat">';
+            $datePending = date_create($detail->tanggal_pending);
+            echo date_format($datePending, "l, d F Y");
+            echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<p>Valid</p>";
+            echo "<h5>Valid</h5>";
+            echo '<p id="tanggalRiwayat">';
+            $dateValid = date_create($detail->tanggal_valid);
+            echo date_format($dateValid, "l, d F Y");
+            echo "</p>";
             echo "</div>";
           } else if ($detail->status_reimbursement == "Selesai") {
             // code...
             echo "<div>";
             echo "<h5>Menunggu Verifikasi</p>";
-            echo "<p>";
+            echo '<p id="tanggalRiwayat">';
             $date = date_create($detail->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<p>Pending</p>";
+            echo "<h5>Pending</h5>";
+            echo '<p id="tanggalRiwayat">';
+            $datePending = date_create($detail->tanggal_pending);
+            echo date_format($datePending, "l, d F Y");
+            echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<p>Valid</p>";
+            echo "<h5>Valid</h5>";
+            echo '<p id="tanggalRiwayat">';
+            $dateValid = date_create($detail->tanggal_valid);
+            echo date_format($dateValid, "l, d F Y");
+            echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<p>Selesai</p>";
+            echo "<h5>Selesai</h5>";
+            echo '<p id="tanggalRiwayat">';
+            $dateSelesai = date_create($detail->tanggal_selesai);
+            echo date_format($dateVSelesai, "l, d F Y");
+            echo "</p>";
             echo "</div>";
           }
           ?>
