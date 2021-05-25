@@ -279,12 +279,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="modal-footer">
-                  <div class="d-flex">
-                    <button type="button" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>Batal</button>
-                    <button type="submit" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" name="button"><i class="fas fa-check me-2"></i>Simpan</button>
-                  </div>
-                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="d-flex">
+                <button type="button" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>Batal</button>
+                <button type="submit" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" name="button"><i class="fas fa-check me-2"></i>Simpan</button>
               </div>
             </div>
           </div>
