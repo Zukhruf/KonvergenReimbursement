@@ -45,6 +45,8 @@
     </nav>
     <!--body-->
     <?php foreach ($detailReimbursement as $detail) : ?>
+    <?php $datePengajuan; ?>
+    <?php $date; ?>
     <div class="container-fluid ms-auto me-auto" id="bodyContent">
       <!--Upper Navbar Content-->
       <div class="d-flex">
@@ -246,7 +248,7 @@
                     <div class="mb-3">
                       <label for="inputTanggalPembelian" class="col-sm-2 col-form-label">Tanggal Pembelian</label>
                       <div class="col-sm">
-                        <input type="date" name="tanggal_pembelian" value="<?php echo $detail->tanggal_pembelian; ?>" class="form-control" id="TanggalPembelian" placeholder="<?php echo $detail->tanggal_pembelian; ?>">
+                        <input type="date" name="tanggal_pembelian" value="<?php echo date_format($date, "l, d F Y"); ?>" class="form-control" id="TanggalPembelian" placeholder="<?php echo $detail->tanggal_pembelian; ?>">
                       </div>
                     </div>
                     <div class="mb-3">
