@@ -188,7 +188,7 @@
             <?php foreach ($reimbursementList as $dataReimbursement) : ?>
               <tr>
                 <td><?php echo $i; ?></td>
-                <td><a href="<?php echo "KaryawanController/readReimbursement/".$dataReimbursement->id_reimbursement;?>"><?php echo $dataReimbursement->id_reimbursement; ?></a></td>
+                <td><a href="<?php echo base_url()."index.php/KaryawanController/readReimbursement/".$dataReimbursement->id_reimbursement;?>"><?php echo $dataReimbursement->id_reimbursement; ?></a></td>
                 <td><?php echo $dataReimbursement->nama_reimbursement; ?></td>
                 <?php $datePembelian = date_create($dataReimbursement->tanggal_pembelian); ?>
                 <td><?php echo date_format($datePembelian, "l, d F Y"); ?></td>
