@@ -87,19 +87,19 @@
         </div>
         <div class="container-fluid ms-auto col" id="detailBodyContent">
           <h1 class="h3 mt-1">Riwayat Status</h1>
-          <?php if ($detail->status_reimbursement == 'Menunggu Reimbursement') {
+          <?php if ($detail->status_reimbursement == "Menunggu Reimbursement") {
             // code...
             echo "<div>";
             echo "<p>Menunggu Verifikasi</p>";
             echo "</div>";
-          } else if ($detail->status_reimbursement == 'Pending') {
+          } else if ($detail->status_reimbursement == "Pending") {
             echo "<div>";
             echo "<p>Menunggu Verifikasi</p>";
             echo "</div>";
             echo "<div>";
             echo "<p>Pending</p>";
             echo "</div>";
-          } else if ($detail->status_reimbursement == 'Tidak Valid') {
+          } else if ($detail->status_reimbursement == "Tidak Valid") {
             // code...
             echo "<div>";
             echo "<p>Menunggu Verifikasi</p>";
@@ -110,7 +110,7 @@
             echo "<div>";
             echo "<p>Tidak Valid</p>";
             echo "</div>";
-          } else if ($detail->status_reimbursement == 'Valid') {
+          } else if ($detail->status_reimbursement == "Valid") {
             // code...
             echo "<div>";
             echo "<p>Menunggu Verifikasi</p>";
@@ -121,7 +121,7 @@
             echo "<div>";
             echo "<p>Valid</p>";
             echo "</div>";
-          } else if ($detail->status_reimbursement == 'Valid') {
+          } else if ($detail->status_reimbursement == "Selesai") {
             // code...
             echo "<div>";
             echo "<p>Menunggu Verifikasi</p>";
