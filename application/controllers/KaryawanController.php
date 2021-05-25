@@ -330,12 +330,11 @@ class KaryawanController extends CI_Controller
     $this->load->view('DetailReimbursement', $result);
   }
 
-  public function search($id_user)
+  public function search()
   {
     // code...
     $nama_reimbursement = $this->input->post('search_query');
-    echo $nama_reimbursement;
-    $result['reimbursementList'] = $this->KaryawanModel->search($nama_reimbursement, $id_user);
+    $result['reimbursementList'] = $this->KaryawanModel->search($nama_reimbursement);
     $this->load->view('KaryawanSearch', $result);
   }
 
