@@ -65,10 +65,6 @@ class FinanceController extends CI_Controller
     date_default_timezone_set('Asia/Bangkok');
     $tanggal_now = date("Y-m-d H:i:s");
 
-    if (condition) {
-      // code...
-    }
-
     if ($status_reimbursement == 'Valid') {
       // code...
       $tanggal_valid = date("Y-m-d H:i:s");
