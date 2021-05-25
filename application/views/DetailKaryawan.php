@@ -80,7 +80,7 @@
       </div>
     </div>
     <!--Modal Foto Resize-->
-    <form action="<?php echo base_url()."KaryawanController/createReimbursement/".$this->session->userdata('id_user');?>" method="post">
+    <form action="<?php echo base_url()."index.php/KaryawanController/editReimbursement/".$this->session->userdata('id_user');?>" method="post">
       <div class="modal fade" id="modalEditKaryawan">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content rounded-4">
@@ -92,47 +92,66 @@
               <div class="d-flex">
                 <div class="container">
                   <div class="mb-3">
-                    <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Nama Karyawan</label>
+                    <label for="NamaKaryawan" class="col-sm-2 col-form-label">Nama Karyawan</label>
                     <div class="col-sm">
-                      <input type="text" name="nama_karyawan" value="" class="form-control" id="NamaReimbursement" placeholder="<?php echo $karyawan->nama_karyawan; ?>">
+                      <input type="text" name="nama_karyawan" value="<?php echo $karyawan->nama_karyawan; ?>" class="form-control" id="NamaKaryawan" placeholder="<?php echo $karyawan->nama_karyawan; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
-                    <label for="inputDeskripsiReimbursement" class="col-sm-2 col-form-label">Unit Kerja Karyawan</label>
+                    <label for="UnitKerja" class="col-sm-2 col-form-label">Unit Kerja Karyawan</label>
                     <div class="col-sm">
-                      <textarea name="deskripsi_reimbursement" rows="6" class="form-control" id="DeskripsiReimbursement" placeholder="<?php echo $karyawan->unit_kerja_karyawan; ?>"></textarea>
+                      <div class="col-md">
+                        <select class="form-select" name="unit_kerja_karyawan" id="UnitKerja">
+                          <option value="COO">COO</option>
+                          <option value="CEO">CEO</option>
+                          <option value="CTO">CTO</option>
+                          <option value="Lead Finance">Lead Finance</option>
+                          <option value="Lead HR">Lead HR</option>
+                          <option value="Sales Representative">Sales Representative</option>
+                          <option value="Project Manager">Project Manager</option>
+                          <option value="Lead AI">Lead AI</option>
+                          <option value="Lead Software">Lead Software</option>
+                          <option value="Lead Annotator">Lead Annotator</option>
+                          <option value="AI Engineer">AI Engineer</option>
+                          <option value="AI Scientist">AI Scientist</option>
+                          <option value="Full Stack Engineer">Full Stack Engineer</option>
+                          <option value="Front End Engineer">Front End Engineer</option>
+                          <option value="Back End Engineer">Back End Engineer</option>
+                          <option value="Annotator">Annotator</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                   <div class="mb-3">
-                    <label for="inputTanggalPembelian" class="col-sm-2 col-form-label">No Telp Karyawan</label>
+                    <label for="NoTeleponKaryawan" class="col-sm-2 col-form-label">No Telp Karyawan</label>
                     <div class="col-sm">
-                      <input type="date" name="tanggal_pembelian" value="" class="form-control" id="TanggalPembelian" placeholder="<?php echo $karyawan->no_telp_karyawan; ?>">
+                      <input type="date" name="no_telp_karyawan" value="<?php echo $karyawan->no_telp_karyawan; ?>" class="form-control" id="NoTeleponKaryawan" placeholder="<?php echo $karyawan->no_telp_karyawan; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
-                    <label for="inputNominalPembelian" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                    <label for="TanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm">
-                      <input type="text" name="nominal_pembelian" value="" class="form-control" id="NominalPembelian" placeholder="<?php echo $karyawan->tanggal_lahir; ?>">
+                      <input type="text" name="tanggal_lahir" value="<?php echo $karyawan->tanggal_lahir; ?>" class="form-control" id="TanggalLahir" placeholder="<?php echo $karyawan->tanggal_lahir; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
-                    <label for="inputNominalPembelian" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                    <label for="JenisKelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm">
-                      <input type="text" name="nominal_pembelian" value="" class="form-control" id="NominalPembelian" placeholder="<?php echo $karyawan->jenis_kelamin; ?>">
+                      <input type="text" name="jenis_kelamin" value="<?php echo $karyawan->jenis_kelamin; ?>" class="form-control" id="JenisKelamin" placeholder="<?php echo $karyawan->jenis_kelamin; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
-                    <label for="inputNominalPembelian" class="col-sm-2 col-form-label">Alamat</label>
+                    <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
                     <div class="col-sm">
-                      <input type="text" name="nominal_pembelian" value="" class="form-control" id="NominalPembelian" placeholder="<?php echo $karyawan->alamat_karyawan; ?>">
+                      <input type="text" name="alamat_karyawan" value="<?php echo $karyawan->alamat_karyawan; ?>" class="form-control" id="Alamat" placeholder="<?php echo $karyawan->alamat_karyawan; ?>">
                     </div>
                   </div>
                 </div>
                 <div class="container">
                   <div class="mb-3">
-                    <label for="inputNominalPembelian" class="col-sm-2 col-form-label">Email Karyawan</label>
+                    <label for="EmailKaryawan" class="col-sm-2 col-form-label">Email Karyawan</label>
                     <div class="col-sm">
-                      <input type="text" name="nominal_pembelian" value="" class="form-control" id="NominalPembelian" placeholder="<?php echo $karyawan->email_karyawan; ?>">
+                      <input type="text" name="email_karyawan" value="<?php echo $karyawan->email_karyawan; ?>" class="form-control" id="EmailKaryawan" placeholder="<?php echo $karyawan->email_karyawan; ?>">
                     </div>
                   </div>
                 </div>
