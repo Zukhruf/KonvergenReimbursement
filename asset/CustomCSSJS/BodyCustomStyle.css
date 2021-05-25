@@ -128,6 +128,10 @@ body {
   border-style: solid;
 }
 
+#tanggalRiwayat {
+  font-size: 10px;
+}
+
 .table-custom thead {
   background-color: #F1F1F1;
   border-radius: 8px 8px 0px 0px;
