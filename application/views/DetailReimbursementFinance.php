@@ -210,7 +210,7 @@
                   <div class="mb-3">
                     <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Nama Reimbursement</label>
                     <div class="col-sm">
-                      <input type="text" name="nama_reimbursement" value="" class="form-control" id="NamaReimbursement" placeholder="<?php echo $details->nama_reimbursement; ?>">
+                      <input type="text" name="nama_reimbursement" value="<?php echo $details->nama_reimbursement; ?>" class="form-control" id="NamaReimbursement" placeholder="<?php echo $details->nama_reimbursement; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
@@ -227,19 +227,19 @@
                   <div class="mb-3">
                     <label for="inputDeskripsiReimbursement" class="col-sm-2 col-form-label">Deskripsi Reimbursement</label>
                     <div class="col-sm">
-                      <textarea name="deskripsi_reimbursement" rows="6" class="form-control" id="DeskripsiReimbursement" placeholder="<?php echo $details->deskripsi_reimbursement; ?>"></textarea>
+                      <textarea name="deskripsi_reimbursement" rows="6" class="form-control" id="DeskripsiReimbursement" placeholder="<?php echo $details->deskripsi_reimbursement; ?>"><?php echo $details->deskripsi_reimbursement; ?></textarea>
                     </div>
                   </div>
                   <div class="mb-3">
                     <label for="inputTanggalPembelian" class="col-sm-2 col-form-label">Tanggal Pembelian</label>
                     <div class="col-sm">
-                      <input type="date" name="tanggal_pembelian" value="" class="form-control" id="TanggalPembelian" placeholder="">
+                      <input type="date" name="tanggal_pembelian" value="<?php echo $details->tanggal_pembelian; ?>" class="form-control" id="TanggalPembelian" placeholder="">
                     </div>
                   </div>
                   <div class="mb-3">
                     <label for="inputNominalPembelian" class="col-sm-2 col-form-label">Nominal Pembelian</label>
                     <div class="col-sm">
-                      <input type="text" name="nominal_pembelian" value="" class="form-control" id="NominalPembelian" placeholder="<?php echo $details->jumlah_reimbursement; ?>">
+                      <input type="text" name="nominal_pembelian" value="<?php echo $details->jumlah_reimbursement; ?>" class="form-control" id="NominalPembelian" placeholder="<?php echo $details->jumlah_reimbursement; ?>">
                     </div>
                   </div>
                   <label for="inputStatusReimbursement" class="col-sm-2 col-form-label">Status</label>
