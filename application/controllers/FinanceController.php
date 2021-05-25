@@ -119,6 +119,15 @@ class FinanceController extends CI_Controller
     // code...
     $nama_reimbursement = $this->input->post('search_query');
     $result['reimbursementList'] = $this->FinanceModel->search($nama_reimbursement);
+    $result['validCount'] = $this->FinanceModel->getValidCount();
+    //Get count Tidak Valid
+    $result['tidakValidCount'] = $this->FinanceModel->getTidakValidCount();
+    //Get count Pending
+    $result['pendingCount'] = $this->FinanceModel->getPendingCount();
+    //Get count Menunggu Verifikasi
+    $result['menungguVerifikasiCount'] = $this->FinanceModel->getMenungguVerifikasiCount();
+    //Get count Selesai
+    $data['selesaiCount'] = $this->FinanceModel->getSelesaiCount();
     $this->load->view('FinanceSearch', $result);
   }
 }

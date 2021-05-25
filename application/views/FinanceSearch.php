@@ -225,7 +225,7 @@
           </thead>
           <tbody>
             <?php $i=1; ?>
-            <?php foreach ($reimbursements as $reimbursement) : ?>
+            <?php foreach ($reimbursementList as $reimbursement) : ?>
               <tr>
                 <td><?php echo $i; ?></td>
                 <td><a href="<?php echo base_url()."index.php/FinanceController/viewReimbursement/".$reimbursement->id_reimbursement; ?>"><?php echo $reimbursement->id_reimbursement; ?></a></td>
