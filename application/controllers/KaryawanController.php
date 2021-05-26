@@ -9,13 +9,6 @@ class KaryawanController extends CI_Controller
   {
     parent::__construct();
     $this->load->model('KaryawanModel');
-
-    $config['upload_path'] = './uploads/';
-    $config['allowed_types'] = 'gif|jpg|png';
-    $config['max_size']     = '100';
-    $config['max_width'] = '1024';
-    $config['max_height'] = '768';
-    $this->load->library('upload', $config);
   }
 
   public function index()
@@ -51,7 +44,7 @@ class KaryawanController extends CI_Controller
       if($foto_size1 == false){
         $alertimage1 = "File yang anda pilih tidak gambar";
         }else{
-          $foto_bukti1 = $_FILES['filePhoto1']['tmp_name'];
+          $foto_bukti1 = $_FILES['filePhoto1']['tmp_name']; 
           #$nama_bukti1 = $_FILES['filePhoto1']['name'];
           $tipe_bukti1 = $_FILES['filePhoto1']['type'];
           if($tipe_bukti1 == 'image/jpeg'){
@@ -66,7 +59,7 @@ class KaryawanController extends CI_Controller
               if($foto_size2 == false){
                 $alertimage2 = "File yang anda pilih tidak gambar";
               }else {
-                $foto_bukti2 = $_FILES['filePhoto2']['tmp_name'];
+                $foto_bukti2 = $_FILES['filePhoto2']['tmp_name']; 
                 $tipe_bukti2 = $_FILES['filePhoto2']['type'];
                 if($tipe_bukti2 == 'image/jpeg'){
                   $tipe_bukti2 = 'image/jpg';
@@ -88,7 +81,7 @@ class KaryawanController extends CI_Controller
               if($foto_size3 == false){
                 $alertimage3 = "File yang anda pilih tidak gambar";
               }else {
-                $foto_bukti3 = $_FILES['filePhoto3']['tmp_name'];
+                $foto_bukti3 = $_FILES['filePhoto3']['tmp_name']; 
                 $tipe_bukti3 = $_FILES['filePhoto3']['type'];
                 if($tipe_bukti3 == 'image/jpeg'){
                   $tipe_bukti3 = 'image/jpg';
@@ -102,13 +95,13 @@ class KaryawanController extends CI_Controller
                 }
                 if($tipebukti2[1] == $tipebukti3[1] and $tipebukti1[1] == $tipebukti2[1]){
                   $nama_bukti3 = "".$bukti."A2.".$tipebukti3[1]."";
-                }
+                } 
                 if($tipebukti2[1] != $tipebukti3[1] and $tipebukti1[1] != $tipebukti3[1]){
                   $nama_bukti3 = "".$bukti."A.".$tipebukti3[1]."";
-                }
-
+                } 
+                
               }
-            }
+            } 
           $dataReimbursement = array('id_user' => $id_user,
             'nama_reimbursement' => $nama_reimbursement, 'jenis_reimbursement' => $kategori_reimbursement,
             'deskripsi_reimbursement' => $deskripsi_reimbursement, 'tanggal_pembelian' => $tgl_pembelian,
@@ -126,27 +119,27 @@ class KaryawanController extends CI_Controller
           $this->load->library('upload', $configA);
           $this->upload->initialize($configA);
           // // File upload
-          if($this->upload->do_upload('filePhoto1')){
+          if($this->upload->do_upload('filePhoto1')){ 
             // Get data about the file
-            $a = $this->upload->data();
+            $a = $this->upload->data();   
           }
           $configB['upload_path'] = './asset/Pict';
           $configB['allowed_types'] = 'jpeg|jpg|png';
           $configB['max_size']     = '200000';
           $configB['file_name'] = $namabukti[0];
           $this->load->library('upload', $configB);
-          if($this->upload->do_upload('filePhoto2')){
+          if($this->upload->do_upload('filePhoto2')){ 
             // Get data about the file
-            $b = $this->upload->data();
+            $b = $this->upload->data(); 
           }
           $configC['upload_path'] = './asset/Pict';
           $configC['allowed_types'] = 'jpeg|jpg|png';
           $configC['max_size']     = '200000';
           $configC['file_name'] = $namabukti[0];
           $this->load->library('upload', $configC);
-          if($this->upload->do_upload('filePhoto3')){
+          if($this->upload->do_upload('filePhoto3')){ 
             // Get data about the file
-            $c= $this->upload->data();
+            $c= $this->upload->data(); 
           }
         }
       }

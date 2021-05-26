@@ -209,7 +209,7 @@
         </div>
       </div>
       <!--Create Reimbursement-->
-       <form action="<?php echo base_url()."index.php/KaryawanController/editReimbursement/".$detail->id_reimbursement;?>" method="post">
+       <form action="<?php echo base_url()."index.php/KaryawanController/editReimbursement/".$detail->id_reimbursement;?>" method="post" enctype="multipart/form-data">
         <div class="modal fade" id="modalEditReimbursement">
           <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content rounded-4">

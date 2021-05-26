@@ -15,7 +15,6 @@ class KaryawanModel extends CI_Model
   {
     // code...
     $this->db->insert('reimbursement', $dataReimbursement);
-    redirect('KaryawanController');
   }
 
   //get id_reimbursement
@@ -36,7 +35,7 @@ class KaryawanModel extends CI_Model
   }
 
   //Delete REIMBURSEMENT
-  public function deleteReimbursement($id_reimbursement,$d)
+  public function deleteReimbursement($id_reimbursement)
   {
     // code...
     $d = array('is_deleted' => 1);
