@@ -80,7 +80,7 @@ class AdminModel extends CI_Model
   public function viewKaryawanOnly()
   {
     // code...
-    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = Karyawan";
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = 'Karyawan'";
     $query = $this->db->query($q);
     return $query->result();
   }
@@ -88,7 +88,7 @@ class AdminModel extends CI_Model
   public function viewAdminOnly()
   {
     // code...
-    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = Admin";
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = 'Admin'";
     $query = $this->db->query($q);
     return $query->result();
   }
@@ -96,7 +96,7 @@ class AdminModel extends CI_Model
   public function viewFinanceOnly()
   {
     // code...
-    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = Finance";
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = 'Finance'";
     $query = $this->db->query($q);
     return $query->result();
   }
