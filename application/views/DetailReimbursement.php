@@ -137,6 +137,7 @@
               echo '<p id="tanggalRiwayat" class="mt-1">';
               $datePending = date_create($details->tanggal_pending);
               echo date_format($datePending, "l, d F Y");
+              echo $details->tanggal_pending;
               echo "</p>";
               echo "</div>";
             } else {
@@ -158,6 +159,7 @@
               echo '<p id="tanggalRiwayat" class="mt-1">';
               $datePending = date_create($details->tanggal_pending);
               echo date_format($datePending, "l, d F Y");
+              echo $details->tanggal_pending;
               echo "</p>";
               echo "</div>";
             } else {
