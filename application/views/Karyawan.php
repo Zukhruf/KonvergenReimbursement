@@ -11,8 +11,14 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/ModalJavascript.js"?>"></script>
     <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/DataTabelJavascript.js"; ?>"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
     <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/disablingInput.js"?>"></script>
+    <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/disableuploadphoto.js"?>"></script>
+    <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/disableSimpan.js"?>"></script>
+    <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/validateform.js"?>"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url()."asset/CustomCSSJS/HeaderStyle.css"; ?>">
     <link rel="stylesheet" href="<?php echo base_url()."asset/CustomCSSJS/BodyCustomStyle.css"; ?>">
@@ -200,7 +206,7 @@
         </table>
       </div>
       <!--Modal-->
-      <form action="<?php echo base_url()."index.php/KaryawanController/createReimbursement/".$this->session->userdata('id_user');?>" method="post" enctype="multipart/form-data">
+      <form action="<?php echo base_url()."index.php/KaryawanController/createReimbursement/".$this->session->userdata('id_user');?>" method="post" id="form-A" enctype="multipart/form-data">
         <div class="modal fade" id="reimbursementModal">
           <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content rounded-1">
@@ -212,13 +218,13 @@
                 <div class="d-flex">
                   <div class="container">
                     <div class="mb-3">
-                      <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Nama Reimbursement</label>
+                      <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Nama Reimbursement<span class="red-star">*</span></label>
                       <div class="col-sm">
                         <input type="text" name="nama_reimbursement" value="" class="form-control" id="NamaReimbursement" placeholder="Masukkan nama reimbursement">
                       </div>
                     </div>
                     <div class="mb-3">
-                      <label for="inputKategoriPengajuan" class="col-sm-2 col-form-label">Kategori Reimbursement</label>
+                      <label for="inputKategoriPengajuan" class="col-sm-2 col-form-label">Kategori Reimbursement<span class="red-star">*</span></label>
                       <div class="col-sm">
                         <select class="form-select" aria-label="Default select example" name="kategori_reimbursement">
                           <option value="Makanan">Makanan</option>
@@ -235,7 +241,7 @@
                       </div>
                     </div>
                     <div class="mb-3">
-                      <label for="inputTanggalPembelian" class="col-sm-2 col-form-label">Tanggal Pembelian</label>
+                      <label for="inputTanggalPembelian" class="col-sm-2 col-form-label">Tanggal Pembelian<span class="red-star">*</span></label>
                       <div class="col-sm">
                         <input type="date" name="tanggal_pembelian" value="" class="form-control" id="TanggalPembelian" placeholder="Masukkan tanggal">
                       </div>
@@ -243,25 +249,25 @@
                   </div>
                   <div class="container">
                     <div class="mb-3">
-                      <label for="inputNominalPembelian" class="col-sm-2 col-form-label">Nominal Pembelian</label>
+                      <label for="inputNominalPembelian" class="col-sm-2 col-form-label">Nominal Pembelian<span class="red-star">*</span></label>
                       <div class="col-sm">
                         <input type="text" name="nominal_pembelian" value="" class="form-control" id="NominalPembelian" placeholder="Masukkan nominal pembelian">
                       </div>
                     </div>
                     <div class="mb-3" id="inputFotoCustom">
-                      <label for="formFile" class="col-sm-2 col-form-label">Upload Bukti</label>
+                      <label for="formFile" class="col-sm-2 col-form-label">Upload Bukti <span class="red-star">*</span></label>
                       <div class="col-sm">
-                        <input class="form-control" type="file" id="formFilePhoto1" placeholder="Upload struk" name="filePhoto1">
+                        <input class="form-control" type="file" id="formFilePhoto1" placeholder="Upload struk" name="filePhoto1">                      
                       </div>
                     </div>
                     <div class="mb-3" id="inputFotoCustom">
                       <div class="col-sm">
-                        <input class="form-control" type="file" id="formFilePhoto2" placeholder="Upload struk" name="filePhoto2">
+                        <input class="form-control" type="file" id="formFilePhoto2" placeholder="Upload struk" name="filePhoto2" disabled>
                       </div>
                     </div>
                     <div class="mb-3" id="inputFotoCustom">
                       <div class="col-sm">
-                        <input class="form-control" type="file" id="formFilePhoto3" placeholder="Upload struk" name="filePhoto3">
+                        <input class="form-control" type="file" id="formFilePhoto3" placeholder="Upload struk" name="filePhoto3" disabled>
                       </div>
                     </div>
                   </div>
@@ -269,8 +275,8 @@
               </div>
               <div class="modal-footer">
                 <div class="d-flex">
-                  <button type="button" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" name="button"><i class="fas fa-times me-2"></i>Batal</button>
-                  <button type="submit" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" name="button"><i class="fas fa-check me-2"></i>Simpan</button>
+                  <button type="button" class="btn btn-confirmation btn-outline-primary ms-auto me-2 shadow mb-2 rounded" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>Batal</button>
+                  <button type="submit" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" id="submit" name="button" disabled="disabled"><i class="fas fa-check me-2"></i>Simpan</button>
                 </div>
               </div>
             </div>
@@ -292,6 +298,20 @@
           </div>
         </div>
       </div>
+      <script>
+        var dataString = $("#FormId").serialize();
+        jQuery.validator.setDefaults({
+        debug: false,
+        success: "valid"});
+        $( "#form-A" ).validate({
+          rules: {
+            nominal_pembelian: {
+              required: true,
+              digits: true,
+              maxlength: 10
+            }}
+          });
+      </script>
     <!-- footer -->
     </br></br></br>
     <footer>
