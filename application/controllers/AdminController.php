@@ -75,6 +75,25 @@ class AdminController extends CI_Controller
     $this->load->view('DetailKaryawan', $query);
   }
 
+  public function edit($id_user)
+  {
+    // code...
+    $nama_karyawan = $this->input->post('nama_karyawan');
+    $unit_kerja_karyawan = $this->input->post('unit_kerja_karyawan');
+    $no_telp_karyawan = $this->input->post('no_telp_karyawan');
+    $tanggal_lahir = $this->input->post('tanggal_lahir');
+    $jenis_kelamin = $this->input->post('jenis_kelamin');
+    $alamat_karyawan = $this->input->post('alamat_karyawan');
+    $email_karyawan = $this->input->post('email_karyawan');
+    $dataEditKaryawan = array('nama_karyawan' => $nama_karyawan,
+      'unit_kerja_karyawan' => $unit_kerja_karyawan, 'no_telp_karyawan' => $no_telp_karyawan,
+      'tanggal_lahir' => $tanggal_lahir, 'jenis_kelamin' => $jenis_kelamin, 'alamat_karyawan' => $alamat_karyawan,
+      'email_karyawan' => $email_karyawan
+    );
+
+    $this->AdminModel->editKaryawan($id_user, $dataEditKaryawan);
+  }
+
   public function logout()
   {
     // code...
