@@ -373,7 +373,6 @@
           </div>
         </div>
       </div>
-    </div>
     <?php endforeach; ?>
     <!-- footer -->
     </br></br></br>
