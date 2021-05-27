@@ -112,7 +112,8 @@
                 buttonSelesai.enabled = true
                 buttonSelesai.style.visibility = 'visible'
                 buttonUbah.disabled = true
-                buttonUbah.style.visibility = 'hidden'
+              } else {
+                buttonSelesai.disabled = true
               }
             </script>
             <div class="container-fluid">
