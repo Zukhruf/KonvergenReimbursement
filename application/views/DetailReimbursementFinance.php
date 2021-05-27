@@ -257,7 +257,7 @@
                   <div class="mb-3">
                     <label for="inputTanggalPembelian" class="col-sm-2 col-form-label">Tanggal Pembelian</label>
                     <div class="col-sm">
-                      <input type="date" name="tanggal_pembelian" value="<?php echo date_format($date, "l, d F Y"); ?>" class="form-control" id="TanggalPembelian" placeholder="">
+                      <input type="date" name="tanggal_pembelian" value="<?php echo date_format($date, "m/d/Y"); ?>" class="form-control" id="TanggalPembelian" placeholder="">
                     </div>
                   </div>
                   <div class="mb-3">
