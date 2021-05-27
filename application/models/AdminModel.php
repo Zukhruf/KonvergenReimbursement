@@ -52,16 +52,13 @@ class AdminModel extends CI_Model
     $this->db->update('user', $d);
   }
 
-  //Update Karyawan
-  public function updateKaryawan($username_user, $password_user, $role_user)
+  //Edit Karyawan
+  public function editKaryawan($id_user, $data)
   {
     // code...
-    $data = array(
-              'password_user' => $password_user,
-              'role_user' => $role_user
-    );
-    $this->db->where('id_user', $username_user);
-    $this->db->update('user', $data);
+    $this->db->where('id_user', $id_user);
+    $this->db->update('karyawan', $data);
+    redirect('AdminController');
   }
 
   //Read List Karyawan
