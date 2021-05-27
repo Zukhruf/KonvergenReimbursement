@@ -82,7 +82,7 @@
       </div>
     </div>
     <!--Modal Foto Resize-->
-    <form action="<?php echo base_url()."index.php/KaryawanController/editReimbursement/".$this->session->userdata('id_user');?>" method="post">
+    <form action="<?php echo base_url()."index.php/AdminController/editKaryawan/".$this->session->userdata('id_user');?>" method="post">
       <div class="modal fade" id="modalEditKaryawan">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content rounded-4">
