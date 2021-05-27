@@ -16,6 +16,7 @@
   </head>
   <body>
     <!--Header-->
+    <?php $tanggal_lahir_karyawan; ?>
     <?php foreach ($dataKaryawan as $karyawan) : ?>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbarHeader">
       <div class="container-fluid">
@@ -69,6 +70,7 @@
             <p>Nama karyawan        : <?php echo $karyawan->nama_karyawan; ?></p>
             <p>Unit Kerja           : <?php echo $karyawan->unit_kerja_karyawan; ?></p>
             <p>No. Telepon          : <?php echo $karyawan->no_telp_karyawan; ?></p>
+            <?php $tanggal_lahir_karyawan = date_create($karyawan->tanggal_lahir); ?>
             <p>Tanggal Lahir        : <?php echo $karyawan->tanggal_lahir; ?></p>
             <p>Jenis Kelamin        : <?php echo $karyawan->jenis_kelamin; ?></p>
             <p>Alamat               : <?php echo $karyawan->alamat_karyawan; ?></p>
@@ -129,7 +131,7 @@
                   <div class="mb-3">
                     <label for="TanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm">
-                      <input type="date" name="tanggal_lahir" value="<?php echo $karyawan->tanggal_lahir; ?>" class="form-control" id="TanggalLahir" placeholder="<?php echo $karyawan->tanggal_lahir; ?>">
+                      <input type="date" name="tanggal_lahir" value="<?php echo date_format($tanggal_lahir_karyawan, "Y-m-d"); ?>" class="form-control" id="TanggalLahir" placeholder="<?php echo $karyawan->tanggal_lahir; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
