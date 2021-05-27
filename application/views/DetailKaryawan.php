@@ -49,10 +49,9 @@
     <div class="container-fluid ms-auto me-auto" id="bodyContent">
       <!--Upper Navbar Content-->
       <div class="d-flex">
-        <button type="button" name="button" class="btn me-1 mb-1 rounded" id="btnBack"><i class="fas fa-arrow-left"></i></button>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb ms-2 mt-2" id="breadcrumbs">
-            <li class="breadcrumb-item"><a href="<?php echo base_url()."index.php/AdminController/"; ?>">Daftar Karyawan</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo base_url()."index.php/AdminController/"; ?>"><button type="button" name="button" class="btn me-1 mb-1 rounded" id="btnBack"><i class="fas fa-arrow-left"></i></button>Daftar Karyawan</a></li>
             <li class="breadcrumb-item active" aria-current="page"><?php echo $karyawan->id_user; ?></li>
           </ol>
         </nav>
