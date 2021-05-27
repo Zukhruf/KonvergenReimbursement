@@ -102,9 +102,9 @@
                 <td><a href="<?php echo base_url()."index.php/AdminController/viewUser/".$dataUser->id_user; ?>"><?php echo $dataUser->id_user; ?></a></td>
                 <td><?php echo $dataUser->username; ?></td>
                 <td><?php echo $dataUser->role; ?></td>
-                <td><a href="<?php echo $id_user_selected = $dataUser->id_user; ?>" data-bs-toggle="modal" data-bs-target="#modalConfirmDelete"><i class="fa fa-trash-alt trash-button" aria-hidden="true"></i></a></td>
+                <td><a href="<?php echo base_url()."index.php/AdminController/hapusUser/".$id_user_selected = $dataUser->id_user; ?>" data-bs-toggle="modal" data-bs-target="#modalConfirmDelete"><i class="fa fa-trash-alt trash-button" aria-hidden="true"></i></a></td>
                 <!--Modal Alert Hapus-->
-                  <div class="modal fade" id="modalConfirmDelete">
+                  <!-- <div class="modal fade" id="modalConfirmDelete">
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                       <div class="modal-content rounded-4">
                         <div class="modal-body" id="confirmAction">
@@ -118,7 +118,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </tr>
               <?php $i++; ?>
             <?php endforeach; ?>
