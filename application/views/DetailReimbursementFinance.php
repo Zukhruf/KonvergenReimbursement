@@ -63,8 +63,21 @@
       <div class="d-flex">
         <div class="container me-2" id="detailBodyContent">
           <div class="d-flex mb-4">
+            <script type="text/javascript">
+              var getStatus = "<?php echo $details->status_reimbursement; ?>"
+              var buttonUbah = document.getElementById('ubahDetail')
+              var buttonSelesai = document.getElementById('selesaiButton')
+              if (getStatus == "Tidak Valid") {
+                buttonSelesai.disabled = true
+                buttonUbah.disabled = true
+              } else if (getStatus == "Valid") {
+                buttonSelesai.enabled = true
+                buttonUbah.disabled = true
+              }
+            </script>
             <h1 class="h3 mt-1">Detail Reimbursement</h1>
-            <button type="button" class="btn rounded btn-outline-primary btn-confirmation shadow ms-auto me-2 mb-2" name="button" data-bs-toggle="modal" data-bs-target="#modalEditReimbursement"><i class="far fa-edit me-2"></i>UBAH DETAIL</button>
+            <button type="button" class="btn rounded btn-outline-primary btn-confirmation shadow ms-auto me-2 mb-2" name="button" data-bs-toggle="modal" data-bs-target="#modalEditReimbursement" id="ubahDetail"><i class="far fa-edit me-2"></i>UBAH DETAIL</button>
+            <a href="#"><button type="button" class="btn rounded btn-outline-primary btn-confirmation shadow ms-auto me-2 mb-2" name="button" id="selesaiButton"><i class="far fa-edit me-2"></i>SELESAI</button></a>
           </div>
           <div class="d-flex">
             <div class="container-fluid">
