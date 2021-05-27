@@ -150,7 +150,7 @@
             echo date_format($datePengajuan, "l, d F Y");
             echo "</p>";
             echo "</div>";
-            if ($details->tanggal_pending != NULL) {
+            if ($detail->tanggal_pending != NULL) {
               // code...
               echo "<div>";
               echo '<h5 id="textPending">Pending</h5>';
