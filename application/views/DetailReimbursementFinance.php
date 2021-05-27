@@ -45,6 +45,8 @@
     </nav>
     <!--body-->
     <?php foreach ($reimbursement as $details) : ?>
+    <?php $datePengajuan; ?>
+    <?php $date; ?>
     <div class="container-fluid ms-auto me-auto" id="bodyContent">
       <!--Upper Navbar Content-->
       <div class="d-flex">
@@ -75,7 +77,29 @@
                 <p>Deskripsi Pembelian  : <?php echo $details->deskripsi_reimbursement; ?></p>
                 <?php $date = date_create($details->tanggal_pembelian); ?>
                 <p>Tanggal Pembelian    : <?php echo date_format($date, "l, d F Y"); ?></p>
-                <p>Status : <span class="badge rounded-pill bg-secondary"> <?php echo $details->status_reimbursement; ?></span></p>
+                <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
+                  // code...
+                  echo '<p>Status : <span class="badge rounded-pill bg-primary" id="textMenungguVerifikasi">';
+                  echo $details->status_reimbursement;
+                  echo '</span></p>';
+                } else if ($details->status_reimbursement == "Pending"){
+                  echo '<p>Status : <span class="badge rounded-pill bg-secondary" id="textPending">';
+                  echo $details->status_reimbursement;
+                  echo '</span></p>';
+                } else if ($details->status_reimbursement == "Tidak Valid"){
+                  echo '<p>Status : <span class="badge rounded-pill bg-danger" id="textTidakValid">';
+                  echo $details->status_reimbursement;
+                  echo '</span></p>';
+                } else if ($details->status_reimbursement == "Valid"){
+                  echo '<p>Status : <span class="badge rounded-pill bg-success" id="textValid">';
+                  echo $details->status_reimbursement;
+                  echo '</span></p>';
+                } else if ($details->status_reimbursement == "Selesai"){
+                  echo '<p>Status : <span class="badge rounded-pill bg-info" id="textSelesai">';
+                  echo $details->status_reimbursement;
+                  echo '</span></p>';
+                }
+                ?>
             </div>
             <div class="container-fluid">
               <p>Nominal pembelian    : <?php echo $details->jumlah_reimbursement; ?></p>
@@ -93,7 +117,7 @@
           <?php if ($details->status_reimbursement == "Menunggu Verifikasi") {
             // code...
             echo "<div>";
-            echo "<h5>Menunggu Verifikasi</h5>";
+            echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
             $date = date_create($details->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
@@ -101,93 +125,93 @@
             echo "</div>";
           } else if ($details->status_reimbursement == "Pending") {
             echo "<div>";
-            echo "<h5>Menunggu Verifikasi</p>";
+            echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
+            $date = date_create($details->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<h5>Pending</h5>";
+            echo '<h5 id="textPending">Pending</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $datePending = date_create($detail->tanggal_pending);
+            $datePending = date_create($details->tanggal_pending);
             echo date_format($datePending, "l, d F Y");
             echo "</p>";
             echo "</div>";
           } else if ($details->status_reimbursement == "Tidak Valid") {
             // code...
             echo "<div>";
-            echo "<h5>Menunggu Verifikasi</p>";
+            echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
+            $date = date_create($details->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<h5>Pending</h5>";
+            echo '<h5 id="textPending">Pending</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $datePending = date_create($detail->tanggal_pending);
+            $datePending = date_create($details->tanggal_pending);
             echo date_format($datePending, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<h5>Tidak Valid</h5>";
+            echo '<h5 id="textTidakValid">Tidak Valid</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $dateTidakValid = date_create($detail->tanggal_tidak_valid);
+            $dateTidakValid = date_create($details->tanggal_tidak_valid);
             echo date_format($dateTidakValid, "l, d F Y");
             echo "</p>";
             echo "</div>";
           } else if ($details->status_reimbursement == "Valid") {
             // code...
             echo "<div>";
-            echo "<h5>Menunggu Verifikasi</p>";
+            echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
+            $date = date_create($details->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<h5>Pending</h5>";
+            echo '<h5 id="textPending">Pending</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $datePending = date_create($detail->tanggal_pending);
+            $datePending = date_create($details->tanggal_pending);
             echo date_format($datePending, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<h5>Valid</h5>";
+            echo '<h5 id="textValid">Valid</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $dateValid = date_create($detail->tanggal_valid);
+            $dateValid = date_create($details->tanggal_valid);
             echo date_format($dateValid, "l, d F Y");
             echo "</p>";
             echo "</div>";
           } else if ($details->status_reimbursement == "Selesai") {
             // code...
             echo "<div>";
-            echo "<h5>Menunggu Verifikasi</p>";
+            echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
+            $date = date_create($details->tanggal_pengajuan);
             echo date_format($date, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<h5>Pending</h5>";
+            echo '<h5 id="textPending">Pending</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $datePending = date_create($detail->tanggal_pending);
+            $datePending = date_create($details->tanggal_pending);
             echo date_format($datePending, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<h5>Valid</h5>";
+            echo '<h5 id="textValid">Valid</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $dateValid = date_create($detail->tanggal_valid);
+            $dateValid = date_create($details->tanggal_valid);
             echo date_format($dateValid, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
-            echo "<h5>Selesai</h5>";
+            echo '<h5 id="textSelesai">Selesai</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $dateSelesai = date_create($detail->tanggal_selesai);
-            echo date_format($dateVSelesai, "l, d F Y");
+            $dateSelesai = date_create($details->tanggal_selesai);
+            echo date_format($dateSelesai, "l, d F Y");
             echo "</p>";
             echo "</div>";
           }
@@ -210,7 +234,7 @@
                   <div class="mb-3">
                     <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Nama Reimbursement</label>
                     <div class="col-sm">
-                      <input type="text" name="nama_reimbursement" value="" class="form-control" id="NamaReimbursement" placeholder="<?php echo $details->nama_reimbursement; ?>">
+                      <input type="text" name="nama_reimbursement" value="<?php echo $details->nama_reimbursement; ?>" class="form-control" id="NamaReimbursement" placeholder="<?php echo $details->nama_reimbursement; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
@@ -227,19 +251,19 @@
                   <div class="mb-3">
                     <label for="inputDeskripsiReimbursement" class="col-sm-2 col-form-label">Deskripsi Reimbursement</label>
                     <div class="col-sm">
-                      <textarea name="deskripsi_reimbursement" rows="6" class="form-control" id="DeskripsiReimbursement" placeholder="<?php echo $details->deskripsi_reimbursement; ?>"></textarea>
+                      <textarea name="deskripsi_reimbursement" rows="6" class="form-control" id="DeskripsiReimbursement" placeholder="<?php echo $details->deskripsi_reimbursement; ?>"><?php echo $details->deskripsi_reimbursement; ?></textarea>
                     </div>
                   </div>
                   <div class="mb-3">
                     <label for="inputTanggalPembelian" class="col-sm-2 col-form-label">Tanggal Pembelian</label>
                     <div class="col-sm">
-                      <input type="date" name="tanggal_pembelian" value="" class="form-control" id="TanggalPembelian" placeholder="">
+                      <input type="date" name="tanggal_pembelian" value="<?php echo date_format($date, "l, d F Y"); ?>" class="form-control" id="TanggalPembelian" placeholder="">
                     </div>
                   </div>
                   <div class="mb-3">
                     <label for="inputNominalPembelian" class="col-sm-2 col-form-label">Nominal Pembelian</label>
                     <div class="col-sm">
-                      <input type="text" name="nominal_pembelian" value="" class="form-control" id="NominalPembelian" placeholder="<?php echo $details->jumlah_reimbursement; ?>">
+                      <input type="text" name="nominal_pembelian" value="<?php echo $details->jumlah_reimbursement; ?>" class="form-control" id="NominalPembelian" placeholder="<?php echo $details->jumlah_reimbursement; ?>">
                     </div>
                   </div>
                   <label for="inputStatusReimbursement" class="col-sm-2 col-form-label">Status</label>

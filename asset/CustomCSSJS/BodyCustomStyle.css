@@ -132,6 +132,46 @@ body {
   font-size: 15px;
 }
 
+#textMenungguVerifikasi {
+  color: #777777;
+}
+
+#textValid {
+  color: #0095BE;
+}
+
+#textTidakValid {
+  color: #FF0000;
+}
+
+#textPending {
+  color: #F0BF00;
+}
+
+#textSelesai {
+  color: #00A42A;
+}
+
+.bg-primary {
+  background-color:   #77777733!important;
+}
+
+.bg-secondary {
+  background-color: #F0BF0033!important;
+}
+
+.bg-danger {
+  background-color: #FF000033!important;
+}
+
+.bg-success {
+  background-color: #0095BE33!important;
+}
+
+.bg-info {
+  background-color: #00A42A33!important;
+}
+
 .table-custom thead {
   background-color: #F1F1F1;
   border-radius: 8px 8px 0px 0px;
