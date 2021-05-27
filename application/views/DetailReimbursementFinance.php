@@ -80,7 +80,7 @@
             </script>
             <h1 class="h3 mt-1">Detail Reimbursement</h1>
             <button type="button" class="btn rounded btn-outline-primary btn-confirmation shadow ms-auto me-2 mb-2" name="button" data-bs-toggle="modal" data-bs-target="#modalEditReimbursement" id="ubahDetail"><i class="far fa-edit me-2"></i>UBAH DETAIL</button>
-            <a href="#"><button type="button" class="btn rounded btn-outline-primary btn-confirmation shadow ms-auto me-2 mb-2" name="button" id="selesaiButton"><i class="far fa-edit me-2"></i>SELESAI</button></a>
+            <a href="#"><button type="button" class="btn rounded btn-outline-primary btn-confirmation shadow ms-auto me-2 mb-2" name="button" id="selesaiButton">SELESAI</button></a>
           </div>
           <div class="d-flex">
             <div class="container-fluid">
