@@ -94,6 +94,34 @@ class AdminController extends CI_Controller
     $this->AdminModel->editKaryawan($id_user, $dataEditKaryawan);
   }
 
+  public function viewKaryawan()
+  {
+    // code...
+    $queryResult['dataResult'] = $this->AdminModel->viewKaryawanOnly();
+    $this->load->view('Admin', $queryResult);
+  }
+
+  public function viewFinance()
+  {
+    // code...
+    $queryResult['dataResult'] = $this->AdminModel->viewFinanceOnly();
+    $this->load->view('Admin', $queryResult);
+  }
+
+  public function viewAdmin()
+  {
+    // code...
+    $queryResult['dataResult'] = $this->AdminModel->viewAdminOnly();
+    $this->load->view('Admin', $queryResult);
+  }
+
+  public function viewAll()
+  {
+    // code...
+    $result['dataResult'] = $this->AdminModel->readListUser();
+    $this->load->view('Admin', $result);
+  }
+
   public function logout()
   {
     // code...

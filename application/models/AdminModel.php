@@ -76,5 +76,29 @@ class AdminModel extends CI_Model
     $query = $this->db->get_where('karyawan', array('id_user' => $id_user));
     return $query->result();
   }
+
+  public function viewKaryawanOnly()
+  {
+    // code...
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = Karyawan";
+    $query = $this->db->query($q);
+    return $query->result();
+  }
+
+  public function viewAdminOnly()
+  {
+    // code...
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = Admin";
+    $query = $this->db->query($q);
+    return $query->result();
+  }
+
+  public function viewFinanceOnly()
+  {
+    // code...
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = Finance";
+    $query = $this->db->query($q);
+    return $query->result();
+  }
 }
 ?>
