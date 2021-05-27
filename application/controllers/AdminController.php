@@ -75,7 +75,7 @@ class AdminController extends CI_Controller
     $this->load->view('DetailKaryawan', $query);
   }
 
-  public function edit($id_user)
+  public function editKaryawan($id_user)
   {
     // code...
     $nama_karyawan = $this->input->post('nama_karyawan');
