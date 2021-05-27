@@ -102,7 +102,7 @@
                 ?>
             </div>
             <script type="text/javascript">
-              var getStatus = "<?php echo $details->status_reimbursement; ?>"
+              var getStatus = "<?php echo $detail->status_reimbursement; ?>"
               var buttonUbah = document.getElementById('ubahDetail')
               var buttonSelesai = document.getElementById('selesaiButton')
               if (getStatus == "Tidak Valid") {
