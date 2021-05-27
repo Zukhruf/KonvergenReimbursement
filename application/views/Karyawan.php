@@ -231,6 +231,7 @@
                           <option value="Kuota Internet">Kuota Internet</option>
                           <option value="Inventaris">Barang Elektronik</option>
                           <option value="Transportasi">Transportasi</option>
+                          <option value="Lain-lain">Lain-lain</option>
                         </select>
                       </div>
                     </div>
@@ -257,7 +258,7 @@
                     <div class="mb-3" id="inputFotoCustom">
                       <label for="formFile" class="col-sm-2 col-form-label">Upload Bukti <span class="red-star">*</span></label>
                       <div class="col-sm">
-                        <input class="form-control" type="file" id="formFilePhoto1" placeholder="Upload struk" name="filePhoto1">                      
+                        <input class="form-control" type="file" id="formFilePhoto1" placeholder="Upload struk" name="filePhoto1">
                       </div>
                     </div>
                     <div class="mb-3" id="inputFotoCustom">
