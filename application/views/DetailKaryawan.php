@@ -151,7 +151,7 @@
                   <div class="mb-3">
                     <label for="EmailKaryawan" class="col-sm-2 col-form-label">Email Karyawan</label>
                     <div class="col-sm">
-                      <input type="text" name="email_karyawan" value="<?php echo $karyawan->email_karyawan; ?>" class="form-control" id="EmailKaryawan" placeholder="<?php echo $karyawan->email_karyawan; ?>">
+                      <input type="email" name="email_karyawan" value="<?php echo $karyawan->email_karyawan; ?>" class="form-control" id="EmailKaryawan" placeholder="<?php echo $karyawan->email_karyawan; ?>">
                     </div>
                   </div>
                 </div>
