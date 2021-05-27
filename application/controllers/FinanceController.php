@@ -57,10 +57,10 @@ class FinanceController extends CI_Controller
     $status_reimbursement = $this->input->post('status_reimbursement');
     $id_finance = $this->session->userdata('id_finance');
 
-    $tanggal_valid;
-    $tanggal_tidak_valid;
-    $tanggal_pending;
-    $tanggal_selesai;
+    $tanggal_valid = NULL;
+    $tanggal_tidak_valid = NULL;
+    $tanggal_pending = NULL;
+    $tanggal_selesai = NULL;
 
     date_default_timezone_set('Asia/Bangkok');
     $tanggal_now = date("Y-m-d H:i:s");
