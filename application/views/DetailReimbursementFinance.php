@@ -360,7 +360,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-confirmation btn-outline-primary ms-auto me-2 shadow mb-2 rounded" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>BATAL</button>
-            <a href="<?php echo base_url()."index.php/FinanceController/deleteReimbursement/".$details->id_reimbursement; ?>"><button type="button" class="btn btn-confirmation btn-outline-primary me-2 shadow mb-2 rounded" name="button"><i class="fas fa-check me-2"></i>YA, LANJUTKAN</button></a>
+            <a href="<?php echo base_url()."index.php/FinanceController/hapusReimbursement/".$details->id_reimbursement; ?>"><button type="button" class="btn btn-confirmation btn-outline-primary me-2 shadow mb-2 rounded" name="button"><i class="fas fa-check me-2"></i>YA, LANJUTKAN</button></a>
           </div>
         </div>
       </div>
