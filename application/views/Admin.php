@@ -206,7 +206,7 @@
                     <div class="mb-3">
                       <label for="EmailKaryawan" class="col-md col-form-label">Email <span class="red-star">*</span></label>
                       <div class="col-md">
-                        <input type="text" name="email_karyawan" value="" class="form-control" id="EmailKaryawan" placeholder="Masukkan email">
+                        <input type="email" name="email_karyawan" value="" class="form-control" id="EmailKaryawan" placeholder="Masukkan email">
                       </div>
                     </div>
                     <div class="mb-3">
