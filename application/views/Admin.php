@@ -59,10 +59,16 @@
           <button type="button" class="btn btn-outline-primary dropdown-toggle shadow mb-2 rounded" name="button" data-bs-toggle="dropdown" data-bs-target="#byRole"><i class="fas fa-filter me-2"></i>Filter By Role</button>
           <ul class="dropdown-menu" id="#byRole">
             <li>
-              <a class="dropdown-item" href="#">Karyawan</a>
+              <a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/viewKaryawan"; ?>">Karyawan</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">Finance</a>
+              <a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/viewFinance"; ?>">Finance</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/viewAdmin"; ?>">Admin</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/viewAll"; ?>">All</a>
             </li>
           </ul>
         </div>
