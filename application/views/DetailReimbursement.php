@@ -46,7 +46,7 @@
     <!--body-->
     <?php foreach ($detailReimbursement as $detail) : ?>
     <?php $datePengajuan; ?>
-    <?php $date; ?>
+    <?php $datePembelian; ?>
     <div class="container-fluid ms-auto me-auto" id="bodyContent">
       <!--Upper Navbar Content-->
       <div class="d-flex">
@@ -74,8 +74,8 @@
                 <p>Tanggal Pengajuan    : <?php echo date_format($datePengajuan, "l, d F Y"); ?></p>
                 <p>Kategori Pembelian   : <?php echo $detail->jenis_reimbursement; ?></p>
                 <p>Deskripsi Pembelian  : <?php echo $detail->deskripsi_reimbursement; ?></p>
-                <?php $date = date_create($detail->tanggal_pembelian); ?>
-                <p>Tanggal pembelian    : <?php echo date_format($date, "l, d F Y"); ?></p>
+                <?php $datePembelian = date_create($detail->tanggal_pembelian); ?>
+                <p>Tanggal pembelian    : <?php echo date_format($datePembelian, "l, d F Y"); ?></p>
                 <?php if ($detail->status_reimbursement == "Menunggu Verifikasi") {
                   // code...
                   echo '<p>Status : <span class="badge rounded-pill bg-primary" id="textMenungguVerifikasi">';
@@ -118,16 +118,16 @@
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
-            echo date_format($date, "l, d F Y");
+            $datePengajuan = date_create($detail->tanggal_pengajuan);
+            echo date_format($datePengajuan, "l, d F Y");
             echo "</p>";
             echo "</div>";
           } else if ($detail->status_reimbursement == "Pending") {
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
-            echo date_format($date, "l, d F Y");
+            $datePengajuan = date_create($detail->tanggal_pengajuan);
+            echo date_format($datePengajuan, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
@@ -142,8 +142,8 @@
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
-            echo date_format($date, "l, d F Y");
+            $datePengajuan = date_create($detail->tanggal_pengajuan);
+            echo date_format($datePengajuan, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
@@ -165,8 +165,8 @@
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
-            echo date_format($date, "l, d F Y");
+            $datePengajuan = date_create($detail->tanggal_pengajuan);
+            echo date_format($datePengajuan, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
@@ -188,8 +188,8 @@
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
-            $date = date_create($detail->tanggal_pengajuan);
-            echo date_format($date, "l, d F Y");
+            $datePengajuan = date_create($detail->tanggal_pengajuan);
+            echo date_format($datePengajuan, "l, d F Y");
             echo "</p>";
             echo "</div>";
             echo "<div>";
@@ -270,7 +270,7 @@
                     <div class="mb-3">
                       <label for="inputTanggalPembelian" class="col-sm-2 col-form-label">Tanggal Pembelian</label>
                       <div class="col-sm">
-                        <input type="date" name="tanggal_pembelian" value="<?php echo date_format($date, "Y-m-d"); ?>" class="form-control" id="TanggalPembelian" placeholder="<?php echo $detail->tanggal_pembelian; ?>">
+                        <input type="date" name="tanggal_pembelian" value="<?php echo date_format($datePembelian, "Y-m-d"); ?>" class="form-control" id="TanggalPembelian" placeholder="<?php echo $detail->tanggal_pembelian; ?>">
                       </div>
                     </div>
                     <div class="mb-3">
