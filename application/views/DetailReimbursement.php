@@ -139,10 +139,9 @@
               echo date_format($datePending, "l, d F Y");
               echo "</p>";
               echo "</div>";
-            } else {
+            } else
               break;
-            }
-          } else if ($detail->status_reimbursement == "Tidak Valid") {
+            } else if ($detail->status_reimbursement == "Tidak Valid") {
             // code...
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
@@ -170,7 +169,7 @@
             echo date_format($dateTidakValid, "l, d F Y");
             echo "</p>";
             echo "</div>";
-          } else if ($detail->status_reimbursement == "Valid") {
+            } else if ($detail->status_reimbursement == "Valid") {
             // code...
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
@@ -198,7 +197,7 @@
             echo date_format($dateValid, "l, d F Y");
             echo "</p>";
             echo "</div>";
-          } else if ($detail->status_reimbursement == "Selesai") {
+            } else if ($detail->status_reimbursement == "Selesai") {
             // code...
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
@@ -226,6 +225,7 @@
             echo date_format($dateValid, "l, d F Y");
             echo "</p>";
             echo "</div>";
+            echo "<div>";
             echo '<h5 id="textSelesai">Selesai</h5>';
             echo '<p id="tanggalRiwayat" class="mt-1">';
             $dateSelesai = date_create($detail->tanggal_selesai);
@@ -367,6 +367,7 @@
           </div>
         </div>
       </div>
+    </div>
     <?php endforeach; ?>
     <!-- footer -->
     </br></br></br>
