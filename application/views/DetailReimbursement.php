@@ -140,8 +140,8 @@
               echo "</p>";
               echo "</div>";
             } else
-              break;
-            } else if ($detail->status_reimbursement == "Tidak Valid") {
+              echo "";
+          } else if ($detail->status_reimbursement == "Tidak Valid") {
             // code...
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
@@ -160,7 +160,7 @@
               echo "</p>";
               echo "</div>";
             } else {
-              break;
+              echo "";
             }
             echo "<div>";
             echo '<h5 id="textTidakValid">Tidak Valid</h5>';
@@ -188,7 +188,7 @@
               echo "</p>";
               echo "</div>";
             } else {
-              break;
+              echo "";
             }
             echo "<div>";
             echo '<h5 id="textValid">Valid</h5>';
@@ -197,7 +197,7 @@
             echo date_format($dateValid, "l, d F Y");
             echo "</p>";
             echo "</div>";
-            } else if ($detail->status_reimbursement == "Selesai") {
+          } else if ($detail->status_reimbursement == "Selesai") {
             // code...
             echo "<div>";
             echo '<h5 id="textMenungguVerifikasi">Menunggu Verifikasi</h5>';
@@ -216,7 +216,7 @@
               echo "</p>";
               echo "</div>";
             } else {
-              break;
+              echo "";
             }
             echo "<div>";
             echo '<h5 id="textValid">Valid</h5>';
