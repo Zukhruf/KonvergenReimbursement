@@ -69,10 +69,13 @@
               var buttonSelesai = document.getElementById('selesaiButton')
               if (getStatus == "Tidak Valid") {
                 buttonSelesai.disabled = true
+                buttonSelesai.style.visibility = 'hidden'
                 buttonUbah.disabled = true
               } else if (getStatus == "Valid") {
                 buttonSelesai.enabled = true
+                buttonSelesai.style.visibility = 'visible'
                 buttonUbah.disabled = true
+                buttonUbah.style.visibility = 'hidden'
               }
             </script>
             <h1 class="h3 mt-1">Detail Reimbursement</h1>

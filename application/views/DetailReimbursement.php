@@ -69,13 +69,17 @@
               var buttonSelesai = document.getElementById('selesaiButton')
               if (getStatus == "Tidak Valid") {
                 buttonSelesai.disabled = true
+                buttonSelesai.style.visibility = 'hidden'
                 buttonUbah.disabled = true
               } else if (getStatus == "Valid") {
+                buttonSelesai.enabled = true
+                buttonSelesai.style.visibility = 'visible'
                 buttonUbah.disabled = true
+                buttonUbah.style.visibility = 'hidden'
               }
             </script>
             <h1 class="h3 mt-1">Detail Reimbursement</h1>
-            <button type="button" class="btn rounded btn-outline-primary btn-confirmation shadow ms-auto me-2 mb-2" name="button" data-bs-toggle="modal" data-bs-target="#modalEditReimbursement"><i class="far fa-edit me-2"></i>UBAH DETAIL</button>
+            <button type="button" class="btn rounded btn-outline-primary btn-confirmation shadow ms-auto me-2 mb-2" name="button" data-bs-toggle="modal" data-bs-target="#modalEditReimbursement" id="ubahDetail"><i class="far fa-edit me-2"></i>UBAH DETAIL</button>
           </div>
           <div class="d-flex">
             <div class="container-fluid">
