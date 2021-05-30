@@ -16,7 +16,6 @@
     <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/disablingInput.js"?>"></script>
     <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/disableuploadphoto.js"?>"></script>
     <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/disableSimpan.js"?>"></script>
-    <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/validateform.js"?>"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -299,7 +298,6 @@
         </div>
       </div>
       <script>
-        var dataString = $("#FormId").serialize();
         jQuery.validator.setDefaults({
         debug: false,
         success: "valid"});

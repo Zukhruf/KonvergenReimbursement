@@ -75,6 +75,34 @@ class AdminController extends CI_Controller
     $this->load->view('DetailKaryawan', $query);
   }
 
+  public function updateeKaryawan($username_user, $data)
+  {
+    $data = array(
+      'nama_karyawan' => $nama_karyawan,
+      'unit_kerja_karyawan' => $unit_kerja,
+      'no_telp_karyawan' => $no_telepon,
+      'tanggal_lahir' => $tgl_lahir,
+      'email_karyawan' => $email_karyawan
+    );
+  }
+
+  public function checkIdUser()
+  {
+    if (array_key_exists('id_user',$_POST)) 
+        {
+          $id_user = $this->input->post('id_user');
+         if($this->AdminModel->cekIDUser($id_user) == TRUE ) 
+          {
+            //echo json_encode(FALSE);
+            echo 'false';
+        } 
+       else 
+        {
+            //echo json_encode(TRUE);
+            echo 'true';
+        }
+     }
+  }
   public function logout()
   {
     // code...

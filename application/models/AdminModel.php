@@ -53,15 +53,11 @@ class AdminModel extends CI_Model
   }
 
   //Update Karyawan
-  public function updateKaryawan($username_user, $password_user, $role_user)
+  public function updateKaryawan($username_user,$data)
   {
     // code...
-    $data = array(
-              'password_user' => $password_user,
-              'role_user' => $role_user
-    );
     $this->db->where('id_user', $username_user);
-    $this->db->update('user', $data);
+    $this->db->update('karyawan', $data);
   }
 
   //Read List Karyawan
@@ -79,5 +75,17 @@ class AdminModel extends CI_Model
     $query = $this->db->get_where('karyawan', array('id_user' => $id_user));
     return $query->result();
   }
+
+  //untuk validate id user
+  public function cekIDUser($id_user)
+  {
+    $query = $this->$db->get_where('id_user', array('id_user' => $id_user));
+    echo $this->db->last_query();
+    if($query->num_rows() > 0)
+    { return True;
+    } else{ return False;}
+  }
+
+
 }
 ?>
