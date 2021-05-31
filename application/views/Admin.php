@@ -62,10 +62,16 @@
           <button type="button" class="btn btn-outline-primary dropdown-toggle shadow mb-2 rounded" name="button" data-bs-toggle="dropdown" data-bs-target="#byRole"><i class="fas fa-filter me-2"></i>Filter By Role</button>
           <ul class="dropdown-menu" id="#byRole">
             <li>
-              <a class="dropdown-item" href="#">Karyawan</a>
+              <a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/viewKaryawan"; ?>">Karyawan</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">Finance</a>
+              <a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/viewFinance"; ?>">Finance</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/viewAdmin"; ?>">Admin</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/viewAll"; ?>">All</a>
             </li>
           </ul>
         </div>
@@ -99,7 +105,7 @@
                 <td><a href="<?php echo base_url()."index.php/AdminController/viewUser/".$dataUser->id_user; ?>"><?php echo $dataUser->id_user; ?></a></td>
                 <td><?php echo $dataUser->username; ?></td>
                 <td><?php echo $dataUser->role; ?></td>
-                <td><a href="<?php echo $id_user_selected = $dataUser->id_user; ?>" data-bs-toggle="modal" data-bs-target="#modalConfirmDelete"><i class="fa fa-trash-alt trash-button" aria-hidden="true"></i></a></td>
+                <td><a href="<?php echo base_url()."index.php/AdminController/hapusUser/".$id_user_selected = $dataUser->id_user; ?>" data-bs-toggle="modal" data-bs-target="#modalConfirmDelete"><i class="fa fa-trash-alt trash-button" aria-hidden="true"></i></a></td>
                 <!--Modal Alert Hapus-->
                   <div class="modal fade" id="modalConfirmDelete">
                     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -110,7 +116,7 @@
                         <div class="modal-footer">
                           <div class="d-flex">
                             <button type="button" class="btn btn-confirmation btn-outline-primary ms-auto me-2 shadow mb-2 rounded" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>BATAL</button>
-                            <a href="<?php echo "AdminController/hapusUser/".$id_user_selected; ?>"><button type="button" class="btn btn-confirmation btn-outline-primary me-2 shadow mb-2 rounded" name="button"><i class="fas fa-check me-2"></i>YA, LANJUTKAN</button></a>
+                            <a href="<?php echo "index.php/AdminController/hapusUser/".$id_user_selected; ?>"><button type="button" class="btn btn-confirmation btn-outline-primary me-2 shadow mb-2 rounded" name="button"><i class="fas fa-check me-2"></i>YA, LANJUTKAN</button></a>
                           </div>
                         </div>
                       </div>
@@ -209,7 +215,7 @@
                     <div class="mb-3">
                       <label for="EmailKaryawan" class="col-md col-form-label">Email <span class="red-star">*</span></label>
                       <div class="col-md">
-                        <input type="text" name="email_karyawan" value="" class="form-control" id="EmailKaryawan" placeholder="Masukkan email">
+                        <input type="email" name="email_karyawan" value="" class="form-control" id="EmailKaryawan" placeholder="Masukkan email">
                       </div>
                     </div>
                     <div class="mb-3">

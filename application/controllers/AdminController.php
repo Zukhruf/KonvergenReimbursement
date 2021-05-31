@@ -75,34 +75,53 @@ class AdminController extends CI_Controller
     $this->load->view('DetailKaryawan', $query);
   }
 
-  public function updateeKaryawan($username_user, $data)
+  public function editKaryawan($id_user)
   {
-    $data = array(
-      'nama_karyawan' => $nama_karyawan,
-      'unit_kerja_karyawan' => $unit_kerja,
-      'no_telp_karyawan' => $no_telepon,
-      'tanggal_lahir' => $tgl_lahir,
+    // code...
+    $nama_karyawan = $this->input->post('nama_karyawan');
+    $unit_kerja_karyawan = $this->input->post('unit_kerja_karyawan');
+    $no_telp_karyawan = $this->input->post('no_telp_karyawan');
+    $tanggal_lahir = $this->input->post('tanggal_lahir');
+    $jenis_kelamin = $this->input->post('jenis_kelamin');
+    $alamat_karyawan = $this->input->post('alamat_karyawan');
+    $email_karyawan = $this->input->post('email_karyawan');
+    $dataEditKaryawan = array('nama_karyawan' => $nama_karyawan,
+      'unit_kerja_karyawan' => $unit_kerja_karyawan, 'no_telp_karyawan' => $no_telp_karyawan,
+      'tanggal_lahir' => $tanggal_lahir, 'jenis_kelamin' => $jenis_kelamin, 'alamat_karyawan' => $alamat_karyawan,
       'email_karyawan' => $email_karyawan
     );
+
+    $this->AdminModel->editKaryawan($id_user, $dataEditKaryawan);
   }
 
-  public function checkIdUser()
+  public function viewKaryawan()
   {
-    if (array_key_exists('id_user',$_POST)) 
-        {
-          $id_user = $this->input->post('id_user');
-         if($this->AdminModel->cekIDUser($id_user) == TRUE ) 
-          {
-            //echo json_encode(FALSE);
-            echo 'false';
-        } 
-       else 
-        {
-            //echo json_encode(TRUE);
-            echo 'true';
-        }
-     }
+    // code...
+    $queryResult['dataResult'] = $this->AdminModel->viewKaryawanOnly();
+    $this->load->view('Admin', $queryResult);
   }
+
+  public function viewFinance()
+  {
+    // code...
+    $queryResult['dataResult'] = $this->AdminModel->viewFinanceOnly();
+    $this->load->view('Admin', $queryResult);
+  }
+
+  public function viewAdmin()
+  {
+    // code...
+    $queryResult['dataResult'] = $this->AdminModel->viewAdminOnly();
+    $this->load->view('Admin', $queryResult);
+  }
+
+  public function viewAll()
+  {
+    // code...
+    $result['dataResult'] = $this->AdminModel->readListUser();
+    $this->load->view('Admin', $result);
+  }
+
   public function logout()
   {
     // code...

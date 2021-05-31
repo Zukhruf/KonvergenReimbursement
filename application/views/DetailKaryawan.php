@@ -16,6 +16,7 @@
   </head>
   <body>
     <!--Header-->
+    <?php $tanggal_lahir_karyawan; ?>
     <?php foreach ($dataKaryawan as $karyawan) : ?>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbarHeader">
       <div class="container-fluid">
@@ -48,9 +49,9 @@
     <div class="container-fluid ms-auto me-auto" id="bodyContent">
       <!--Upper Navbar Content-->
       <div class="d-flex">
-        <button type="button" name="button" class="btn me-1 mb-1 rounded" id="btnBack"><i class="fas fa-arrow-left"></i></button>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb ms-2 mt-2" id="breadcrumbs">
+            <a href="<?php echo base_url()."index.php/AdminController/"; ?>"><button type="button" name="button" class="btn me-1 mb-1 rounded" id="btnBack"><i class="fas fa-arrow-left"></i></button></a>
             <li class="breadcrumb-item"><a href="<?php echo base_url()."index.php/AdminController/"; ?>">Daftar Karyawan</a></li>
             <li class="breadcrumb-item active" aria-current="page"><?php echo $karyawan->id_user; ?></li>
           </ol>
@@ -69,6 +70,7 @@
             <p>Nama karyawan        : <?php echo $karyawan->nama_karyawan; ?></p>
             <p>Unit Kerja           : <?php echo $karyawan->unit_kerja_karyawan; ?></p>
             <p>No. Telepon          : <?php echo $karyawan->no_telp_karyawan; ?></p>
+            <?php $tanggal_lahir_karyawan = date_create($karyawan->tanggal_lahir); ?>
             <p>Tanggal Lahir        : <?php echo $karyawan->tanggal_lahir; ?></p>
             <p>Jenis Kelamin        : <?php echo $karyawan->jenis_kelamin; ?></p>
             <p>Alamat               : <?php echo $karyawan->alamat_karyawan; ?></p>
@@ -80,7 +82,7 @@
       </div>
     </div>
     <!--Modal Foto Resize-->
-    <form action="<?php echo base_url()."index.php/KaryawanController/editReimbursement/".$this->session->userdata('id_user');?>" method="post">
+    <form action="<?php echo base_url()."index.php/AdminController/editKaryawan/".$karyawan->id_user;?>" method="post">
       <div class="modal fade" id="modalEditKaryawan">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content rounded-4">
@@ -129,7 +131,7 @@
                   <div class="mb-3">
                     <label for="TanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                     <div class="col-sm">
-                      <input type="date" name="tanggal_lahir" value="<?php echo $karyawan->tanggal_lahir; ?>" class="form-control" id="TanggalLahir" placeholder="<?php echo $karyawan->tanggal_lahir; ?>">
+                      <input type="date" name="tanggal_lahir" value="<?php echo date_format($tanggal_lahir_karyawan, "Y-m-d"); ?>" class="form-control" id="TanggalLahir" placeholder="<?php echo $karyawan->tanggal_lahir; ?>">
                     </div>
                   </div>
                   <div class="mb-3">
@@ -149,7 +151,7 @@
                   <div class="mb-3">
                     <label for="EmailKaryawan" class="col-sm-2 col-form-label">Email Karyawan</label>
                     <div class="col-sm">
-                      <input type="text" name="email_karyawan" value="<?php echo $karyawan->email_karyawan; ?>" class="form-control" id="EmailKaryawan" placeholder="<?php echo $karyawan->email_karyawan; ?>">
+                      <input type="email" name="email_karyawan" value="<?php echo $karyawan->email_karyawan; ?>" class="form-control" id="EmailKaryawan" placeholder="<?php echo $karyawan->email_karyawan; ?>">
                     </div>
                   </div>
                 </div>

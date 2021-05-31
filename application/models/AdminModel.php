@@ -52,12 +52,13 @@ class AdminModel extends CI_Model
     $this->db->update('user', $d);
   }
 
-  //Update Karyawan
-  public function updateKaryawan($username_user,$data)
+  //Edit Karyawan
+  public function editKaryawan($id_user, $data)
   {
     // code...
-    $this->db->where('id_user', $username_user);
+    $this->db->where('id_user', $id_user);
     $this->db->update('karyawan', $data);
+    redirect('AdminController');
   }
 
   //Read List Karyawan
@@ -86,6 +87,28 @@ class AdminModel extends CI_Model
     } else{ return False;}
   }
 
+  public function viewKaryawanOnly()
+  {
+    // code...
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = 'Karyawan'";
+    $query = $this->db->query($q);
+    return $query->result();
+  }
 
+  public function viewAdminOnly()
+  {
+    // code...
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = 'Admin'";
+    $query = $this->db->query($q);
+    return $query->result();
+  }
+
+  public function viewFinanceOnly()
+  {
+    // code...
+    $q = "SELECT * FROM user WHERE is_deleted = 0 AND role = 'Finance'";
+    $query = $this->db->query($q);
+    return $query->result();
+  }
 }
 ?>
