@@ -225,7 +225,7 @@
                     <div class="mb-3">
                       <label for="inputKategoriPengajuan" class="col-sm-2 col-form-label">Kategori Reimbursement<span class="red-star">*</span></label>
                       <div class="col-sm">
-                        <select class="form-select" aria-label="Default select example" name="kategori_reimbursement">
+                        <select class="form-select" aria-label="Default select example" name="kategori_reimbursement" id="kategoriReimbursement">
                           <option value="Makanan">Makanan</option>
                           <option value="Kuota Internet">Kuota Internet</option>
                           <option value="Inventaris">Barang Elektronik</option>
@@ -302,12 +302,19 @@
         jQuery.validator.setDefaults({
         debug: false,
         success: "valid"});
+        $.validator.addMethod('lessThanEqual', function(value, element) {
+        if($("#kategoriReimbursement").val() =='Kuota Internet'){
+        return this.optional(element) || value <= 200000 && value >= 1;
+        }else { return true;};
+        }, "The value must be digits between 1 - 200000");
+
         $( "#form-A" ).validate({
           rules: {
             nominal_pembelian: {
               required: true,
-              digits: true,
-              maxlength: 10
+              lessThanEqual: true,
+              digits: true
+              
             }}
           });
       </script>

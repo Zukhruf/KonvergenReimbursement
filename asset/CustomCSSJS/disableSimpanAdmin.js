@@ -1,13 +1,13 @@
 $(document).ready(
     function() {
-    $('#submit').prop('disabled', true);
+    $('#submits').prop('disabled', true);
   
     function validateNextButton() {
       var buttonDisabled = $('#IDKaryawan').val().trim() === '' || $('#NamaKaryawan').val().trim() === '' 
       || $('#NoTeleponKaryawan').val().trim() === '' || $('#TanggalLahir').val().trim() === '' ||
       $('#EmailKaryawan').val().trim() === '' || $('#Alamat').val().trim() === '' ||
       $('#UsernameKaryawan').val().trim() === '' || $('#PasswordKaryawan').val().trim() === '';
-      $('#submit').prop('disabled', buttonDisabled);
+      $('#submits').prop('disabled', buttonDisabled);
     }
   
     $('#IDKaryawan').on('keyup', validateNextButton);

@@ -13,7 +13,6 @@
     <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/DataTabelJavascript.js"; ?>"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
     <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/disablingInput.js"?>"></script>
-    <script type="text/javascript" src="<?php echo base_url()."asset/CustomCSSJS/disableSimpanAdmin.js"?>"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -236,7 +235,7 @@
               <div class="modal-footer">
                 <div class="d-flex">
                   <button type="button" class="btn btn-confirmation btn-outline-primary ms-auto me-2 shadow mb-2 rounded" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>Batal</button>
-                  <button type="submit" class="btn btn-confirmation btn-outline-primary me-2 shadow mb-2 rounded" id="submit" name="button" disabled="disabled"><i class="fas fa-check me-2"></i>Simpan</button>
+                  <button type="submit" class="btn btn-confirmation btn-outline-primary me-2 shadow mb-2 rounded" id="submit" name="button"><i class="fas fa-check me-2"></i>Simpan</button>
                 </div>
               </div>
             </div>
@@ -248,7 +247,9 @@
       debug: false,
       success: "valid"});
       $.validator.addMethod('customphone', function (value, element) {
-        return this.optional(element) || /^(0)\d{9,13}$/.test(value);
+        if (/^(0)\d{9,13}$/.test(value)){
+          return false;
+        } else { return true;};
       }, "Silakan diisi No.Telepon yang valid!");
       $( "#form-Ad" ).validate({
         rules: {
@@ -257,11 +258,24 @@
             digits: true,
             maxlength: 9
           },
-          no_telp_karyawan: 'customphone'  
-          ,
+          nama_karyawan: {
+            required: true,
+            minlength: 3
+          },
+          no_telp_karyawan: {
+            required: true,
+            customphone: true
+          },
           email_karyawan: {
             required: true,
             email: true
+          },
+          tanggal_lahir:{
+            required: true
+          },
+          alamat_karyawan: {
+            required: true,
+            minlength: 3
           },
           username_karyawan: {
             required: true,
@@ -289,6 +303,17 @@
           password_karyawan: {
             required: 'Silakan isi password!',
             minlength: 'Password minimal 5 karakter!'
+          },
+          nama_karyawan: {
+            required: 'Silakan isi nama karyawan!',
+            minlength: 'Nama karyawan minimal 3 karakter!'
+          },
+          no_telp_karyawan:{
+            required: 'Silakan isi nomor telepon!'
+          },
+          alamat_karyawan:{
+            required: 'Silakan isi alamat karyawan!',
+            minlength: 'Alamat karyawan minimal 3 karakter!'
           }
         }}
         );
