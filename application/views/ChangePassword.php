@@ -61,7 +61,7 @@
       </div>
       <!--Detail Karyawan-->
       <?= isset($_SESSION['p']) ? $_SESSION['p'] : "" ?>
-      <form class="" action="<?php echo base_url()."index.php/KaryawanController/changePass/". $karyawan->id_user/ ?>" method="post">
+      <form class="" action="<?php echo base_url()."index.php/KaryawanController/changePass/". $karyawan->id_user; ?>" method="post">
         <div class="container-fluid" id="detailBodyContent">
           <div class="d-flex mb-4">
             <h1 class="h3 mt-1">Ubah Password</h1>
