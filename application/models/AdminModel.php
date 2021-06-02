@@ -90,7 +90,7 @@ class AdminModel extends CI_Model
   public function getIDUser($username)
   {
     // code...
-    $query = $this->db->get_where('user', array('username' => $username););
+    $query = $this->db->get_where('user', array('username' => $username));
     $return = $query->row_array();
     return $return;
   }
