@@ -43,7 +43,7 @@
                 <?php echo $this->session->userdata('role'); ?>, <?php echo $this->session->userdata('username'); ?>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" id="dropdownItemNavbar" href="<?php echo base_url()."index.php/LoginController/PassChange"; ?>"><i class="fas fa-key me-2"></i>Ubah Password</a></li>
+                <li><a class="dropdown-item" id="dropdownItemNavbar" href="<?php echo base_url()."index.php/LoginController/PassChange/".$this->session->userdata('username'); ?>"><i class="fas fa-key me-2"></i>Ubah Password</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url()."index.php/AdminController/logout" ?>"><i class="fas fa-sign-out-alt me-2"></i>Log Out</a></li>
               </ul>
             </li>

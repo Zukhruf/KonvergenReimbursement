@@ -87,6 +87,14 @@ class AdminModel extends CI_Model
     } else{ return False;}
   }
 
+  public function getIDUser($username)
+  {
+    // code...
+    $query = $this->db->get_where('user', array('username' => $username););
+    $return = $query->row_array();
+    return $return;
+  }
+
   public function viewKaryawanOnly()
   {
     // code...
