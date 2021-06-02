@@ -91,7 +91,7 @@ class AdminModel extends CI_Model
   {
     // code...
     $query = $this->db->get_where('user', array('username' => $username));
-    $return = $query->row_array();
+    $return = $query->result();
     return $return;
   }
 
