@@ -42,8 +42,9 @@ class LoginController extends CI_Controller {
 		}
 	}
 
-	public function PassChange()
+	public function PassChange($username)
 	{
-		$this->load->view('ChangePassword');
+		$queryResult['dataKaryawan'] = $this->AdminModel->getIDUser($username);
+		$this->load->view('ChangePassword', $queryResult);
 	}
 }
