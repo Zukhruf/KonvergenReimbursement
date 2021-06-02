@@ -104,7 +104,7 @@ class KaryawanModel extends CI_Model
     // code...
     $data = array('id_user' => $id_user, 'password' => md5($last_pass));
     $queryResult = $this->db->get_where('user', $data);
-    if ($query->num_rows()>0) {
+    if ($queryResult->num_rows()>0) {
       return TRUE;
     } else {
       return FALSE;
