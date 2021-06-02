@@ -57,7 +57,6 @@
             <li class="breadcrumb-item active" aria-current="page">Ubah Password</li>
           </ol>
         </nav>
-        <button type="button" class="btn btn-outline-primary shadow ms-auto me-1 mb-2 rounded" name="button" id="btnHapusFilter"><i class="fas fa-trash-alt me-2"></i>HAPUS REIMBURSEMENT</button>
       </div>
       <!--Detail Karyawan-->
       <?= isset($_SESSION['p']) ? $_SESSION['p'] : "" ?>
@@ -71,17 +70,14 @@
               <div class="form-floating mb-3">
                 <input type="password" name="pass_lama" value="" class="form-control" id="PasswordLama" placeholder="">
                 <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Password Lama <span class="red-star">*</span></label>
-                <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
               </div>
               <div class="form-floating mb-3">
                 <input type="password" name="pass_baru" value="" class="form-control" id="PasswordBaru" placeholder="">
                 <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Password Baru <span class="red-star">*</span></label>
-                <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
               </div>
               <div class="form-floating mb-3">
                 <input type="password" name="konfirmasi_pass_baru" value="" class="form-control" id="KonfirmasiPasswordBaru" placeholder="">
                 <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Ulangi Password Baru <span class="red-star">*</span></label>
-                <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
               </div>
             </div>
           </div>
@@ -106,16 +102,4 @@
   <?php endforeach; ?>
     <!-- footer -->
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script>
-	$(".toggle-password").click(function() {
-		$(this).toggleClass("fa-eye fa-eye-slash");
-		var input = $($(this).attr("toggle"));
-		if (input.attr("type") == "password") {
-			input.attr("type", "text");
-		} else {
-			input.attr("type", "password");
-		}
-	});
-</script>
 </html>
