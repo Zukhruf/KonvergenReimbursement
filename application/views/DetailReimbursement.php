@@ -105,7 +105,7 @@
               var getStatus = "<?php echo $detail->status_reimbursement; ?>"
               var buttonUbah = document.getElementById('ubahDetail')
               var buttonSelesai = document.getElementById('selesaiButton')
-              var buttonHapus = document.getElementsByName('buttonHapusReimbursement')
+              var buttonHapus = document.getElementsById('buttonHapusFilter')
               if (getStatus == "Tidak Valid") {
                 buttonSelesai.disabled = true
                 buttonSelesai.style.visibility = 'hidden'
@@ -114,7 +114,7 @@
                 buttonSelesai.enabled = true
                 buttonSelesai.style.visibility = 'visible'
                 buttonUbah.disabled = true
-                buttonHapus.disabled = TRUE
+                buttonHapus.disabled = true
                 buttonHapus.style.visibility = 'hidden'
               } else {
                 buttonSelesai.disabled = true
