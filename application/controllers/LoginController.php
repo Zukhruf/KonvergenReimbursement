@@ -40,7 +40,10 @@ class LoginController extends CI_Controller {
 
 			}
 		}
-
 	}
 
+	public function PassChange()
+	{
+		$this->load->view('changePassword');
+	}
 }
