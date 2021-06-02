@@ -68,21 +68,21 @@
           </div>
           <div class="d-flex">
             <div class="container-fluid">
-              <div class="mb-3">
+              <div class="form-floating mb-3">
                 <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Password Lama <span class="red-star">*</span></label>
                 <div class="col-sm">
                   <input type="password" name="pass_lama" value="" class="form-control" id="PasswordLama" placeholder="">
                   <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                 </div>
               </div>
-              <div class="mb-3">
+              <div class="form-floating mb-3">
                 <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Password Baru <span class="red-star">*</span></label>
                 <div class="col-sm">
                   <input type="password" name="pass_baru" value="" class="form-control" id="PasswordBaru" placeholder="">
                   <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                 </div>
               </div>
-              <div class="mb-3">
+              <div class="form-floating mb-3">
                 <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Ulangi Password Baru <span class="red-star">*</span></label>
                 <div class="col-sm">
                   <input type="password" name="konfirmasi_pass_baru" value="" class="form-control" id="KonfirmasiPasswordBaru" placeholder="">
@@ -93,8 +93,8 @@
           </div>
         </div>
         <div class="d-flex">
-          <button type="button" class="btn btn-confirmation rounded btn-outline-primary ms-auto me-2 mb-2 shadow" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>Batal</button>
-          <button type="submit" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" name="button"><i class="fas fa-check me-2"></i>Simpan</button>
+          <button type="button" class="btn btn-confirmation rounded btn-outline-primary mt-2 ms-auto me-2 mb-2 shadow" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>Batal</button>
+          <button type="submit" class="btn btn-confirmation rounded btn-outline-primary mt-2 me-2 mb-2 shadow" name="button"><i class="fas fa-check me-2"></i>Simpan</button>
         </div>
       </form>
     </div>
