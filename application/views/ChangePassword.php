@@ -65,7 +65,6 @@
         <div class="container-fluid" id="detailBodyContent">
           <div class="d-flex mb-4">
             <h1 class="h3 mt-1">Ubah Password</h1>
-            <button type="button" class="btn rounded btn-outline-primary btn-confirmation ms-auto me-2 mb-2 shadow" name="button" data-bs-toggle="modal" data-bs-target="#modalEditKaryawan"><i class="far fa-edit me-2"></i>UBAH DETAIL</button>
           </div>
           <div class="d-flex">
             <div class="container-fluid">
@@ -94,7 +93,7 @@
           </div>
         </div>
         <div class="d-flex">
-          <button type="button" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>Batal</button>
+          <button type="button" class="btn btn-confirmation rounded btn-outline-primary ms-auto me-2 mb-2 shadow" data-bs-dismiss="modal" name="button"><i class="fas fa-times me-2"></i>Batal</button>
           <button type="submit" class="btn btn-confirmation rounded btn-outline-primary me-2 mb-2 shadow" name="button"><i class="fas fa-check me-2"></i>Simpan</button>
         </div>
       </form>
