@@ -114,7 +114,7 @@
                 buttonSelesai.enabled = true
                 buttonSelesai.style.visibility = 'visible'
                 buttonUbah.disabled = true
-                buttonHapus.style.visibility = 'hidden'
+                buttonHapus.disabled = true
               } else {
                 buttonSelesai.disabled = true
               }
