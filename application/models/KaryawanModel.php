@@ -91,6 +91,26 @@ class KaryawanModel extends CI_Model
     $queryResult = $this->db->get('reimbursement');
     return $queryResult->result();
   }
+
+  public function changePassword($id_user, $new_pass)
+  {
+    $data = array('password' => md5($new_pass));
+    $this->db->where('id_user', $id_user);
+    $this->db->update('user', $data);
+  }
+
+  public function checkPass($id_user, $last_pass)
+  {
+    // code...
+    $data = array('id_user' => $id_user, 'password' => md5($last_pass));
+    $queryResult = $this->db->get_where('user', $data);
+    if ($query->num_rows()>0) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+
+  }
 }
 
 
