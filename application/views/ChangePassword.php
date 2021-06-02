@@ -69,18 +69,18 @@
           <div class="d-flex">
             <div class="container-fluid">
               <div class="form-floating mb-3">
-                <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Password Lama <span class="red-star">*</span></label>
                 <input type="password" name="pass_lama" value="" class="form-control" id="PasswordLama" placeholder="">
+                <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Password Lama <span class="red-star">*</span></label>
                 <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
               </div>
               <div class="form-floating mb-3">
-                <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Password Baru <span class="red-star">*</span></label>
                 <input type="password" name="pass_baru" value="" class="form-control" id="PasswordBaru" placeholder="">
+                <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Password Baru <span class="red-star">*</span></label>
                 <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
               </div>
               <div class="form-floating mb-3">
-                <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Ulangi Password Baru <span class="red-star">*</span></label>
                 <input type="password" name="konfirmasi_pass_baru" value="" class="form-control" id="KonfirmasiPasswordBaru" placeholder="">
+                <label for="inputNamaReimbursement" class="col-sm-2 col-form-label">Ulangi Password Baru <span class="red-star">*</span></label>
                 <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
               </div>
             </div>
