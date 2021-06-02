@@ -237,7 +237,7 @@
                 <td><?php echo $reimbursement->jumlah_reimbursement; ?></td>
                 <td><?php echo $reimbursement->status_reimbursement; ?></td>
                 <?php
-                  if ($reimbursement->status_reimbursement != "Selesai") {
+                  if ($reimbursement->status_reimbursement != "Valid") {
                     // code...
                     echo "<td>";
                     echo '<a href="<?php echo base_url()."index.php/FinanceController/hapusReimbursement/".$reimbursement->id_reimbursement; ?>">';

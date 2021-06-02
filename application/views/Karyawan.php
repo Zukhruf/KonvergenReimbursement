@@ -198,7 +198,7 @@
                 <td><?php echo $dataReimbursement->jumlah_reimbursement; ?></td>
                 <td><?php echo $dataReimbursement->status_reimbursement; ?></td>
                 <?php
-                  if ($dataReimbursement->status_reimbursement != "Selesai") {
+                  if ($dataReimbursement->status_reimbursement != "Valid") {
                     // code...
                     echo "<td>";
                     echo '<a href="<?php $id_reimbursement_selected = $dataReimbursement->id_reimbursement; ?>" data-bs-toggle="modal" data-bs-target="#modalConfirmDelete">';
