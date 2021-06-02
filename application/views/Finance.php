@@ -236,7 +236,17 @@
                 <td><?php echo $reimbursement->jenis_reimbursement; ?></td>
                 <td><?php echo $reimbursement->jumlah_reimbursement; ?></td>
                 <td><?php echo $reimbursement->status_reimbursement; ?></td>
-                <td><a href="<?php echo base_url()."index.php/FinanceController/hapusReimbursement/".$reimbursement->id_reimbursement; ?>"><i class="fa fa-trash-alt trash-button" aria-hidden="true"></i></a></td>
+                <?php
+                  if ($reimbursement->status_reimbursement != "Selesai") {
+                    // code...
+                    echo "<td>";
+                    echo '<a href="<?php echo base_url()."index.php/FinanceController/hapusReimbursement/".$reimbursement->id_reimbursement; ?>">';
+                    echo '<i class="fa fa-trash-alt trash-button" aria-hidden="true">';
+                    echo "</i>";
+                    echo "</a>";
+                    echo "</td>";
+                  }
+                ?>
               </tr>
               <?php $i++; ?>
             <?php endforeach; ?>

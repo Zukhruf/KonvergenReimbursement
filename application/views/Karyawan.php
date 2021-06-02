@@ -197,7 +197,17 @@
                 <td><?php echo $dataReimbursement->jenis_reimbursement; ?></td>
                 <td><?php echo $dataReimbursement->jumlah_reimbursement; ?></td>
                 <td><?php echo $dataReimbursement->status_reimbursement; ?></td>
-                <td><a href="<?php $id_reimbursement_selected = $dataReimbursement->id_reimbursement; ?>" data-bs-toggle="modal" data-bs-target="#modalConfirmDelete"><i class="fa fa-trash-alt trash-button" aria-hidden="true"></i></a></td>
+                <?php
+                  if ($dataReimbursement->status_reimbursement != "Selesai") {
+                    // code...
+                    echo "<td>";
+                    echo '<a href="<?php $id_reimbursement_selected = $dataReimbursement->id_reimbursement; ?>" data-bs-toggle="modal" data-bs-target="#modalConfirmDelete">';
+                    echo '<i class="fa fa-trash-alt trash-button" aria-hidden="true">';
+                    echo "</i>";
+                    echo "</a>";
+                    echo "</td>";
+                  }
+                ?>
               </tr>
               <?php $i++; ?>
             <?php endforeach; ?>

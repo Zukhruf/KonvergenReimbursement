@@ -57,7 +57,7 @@
             <li class="breadcrumb-item active" aria-current="page"><?php echo $detail->id_reimbursement; ?></li>
           </ol>
         </nav>
-        <button type="button" class="btn btn-outline-primary shadow ms-auto me-1 mb-2 rounded" name="button" id="btnHapusFilter" data-bs-toggle="modal" data-bs-target="#modalHapusReimbursement"><i class="fas fa-trash-alt me-2"></i>HAPUS REIMBURSEMENT</button>
+        <button type="button" class="btn btn-outline-primary shadow ms-auto me-1 mb-2 rounded" name="buttonHapusReimbursement" id="btnHapusReimbursement" data-bs-toggle="modal" data-bs-target="#modalHapusReimbursement"><i class="fas fa-trash-alt me-2"></i>HAPUS REIMBURSEMENT</button>
       </div>
       <!--Detail Reimbursement-->
       <div class="d-flex">
@@ -113,6 +113,9 @@
                 buttonSelesai.enabled = true
                 buttonSelesai.style.visibility = 'visible'
                 buttonUbah.disabled = true
+              }else if (getStatus == "Selesai"){
+                buttonHapus.disabled = TRUE
+                buttonHapus.style.visibility = 'hidden'
               } else {
                 buttonSelesai.disabled = true
               }
